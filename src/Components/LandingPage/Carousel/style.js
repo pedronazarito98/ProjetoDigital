@@ -4,12 +4,10 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
 
-  height: 350px;
-  width: 200px;
+  height:${props => props.increase ? 375 : 350}px;
+  width: ${props => props.increase ? 65 : 60}%;
   border-radius: 10px;
-  margin: 10px;
   background-color: #f2f2fc;
   padding: 10px;
 
@@ -19,13 +17,9 @@ export const Card = styled.div`
 
   transition: 0.25s;
 
-  margin-left: 47px;
-
   &:hover{
-    height: 360px;
-    width: 210px;
-    margin-left: 45px;
-    margin-top:0px;
+    height: 375px;
+    width: 65%;
   }
 `;
 

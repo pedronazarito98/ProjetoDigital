@@ -6,8 +6,8 @@ export const Container = styled.div`
   background-color: #f2f2fc;
 
   padding-top: 50px;
-  padding-left: 180px;
-  padding-right: 170px;
+  padding-left: 200px;
+  padding-right: 200px;
 
   @media(max-width: 1024px) {
     padding-left: 0px;
