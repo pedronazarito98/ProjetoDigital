@@ -2,9 +2,12 @@ import { Container } from "./style";
 import Carousel from "../../Components/LandingPage/Carousel";
 import Button from "../../Components/LandingPage/Button";
 
-export default function EmployeesSection() {
+export default function LandingPage() {
 
     return (
+        /***********************************************************  
+        *********************** CAROUSEL ***************************
+        ************************************************************/
         <Container>
             <Carousel />
 
@@ -12,5 +15,9 @@ export default function EmployeesSection() {
                 <Button text="SAIBA MAIS SOBRE CADA PLANO" />
             </div>
         </Container>
+
+        /***********************************************************  
+        ************************* CARDS ****************************
+        ************************************************************/
     );
 }
