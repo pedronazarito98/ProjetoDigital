@@ -11,6 +11,9 @@ export const Container = styled.div`
     border-radius: 20px;
     color: white;
     transition: 0.25s;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 
     &:hover{
         background-color: #7bad33; 
