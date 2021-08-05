@@ -8,7 +8,7 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
 import Carousel from "../../Components/LandingPage/Carousel";
-import Button from "../../Components/LandingPage/Button";
+import {Button} from "../../Components/LandingPage/Button";
 import Cards from "../../Components/LandingPage/Cards";
 //Tags Estilizadas ******************************************************************
 import {
@@ -27,12 +27,32 @@ import {
     cremationText02
 } from "../../Mocks/LandingPage/mock.js";
 //***********************************************************************************
+import { Background, BackgroundServices, Container, ContainerImage } from "./style";
+
+import { TextInfo } from "../../Components/LandingPage/TextInfo";
+import imgHome from '../../Assets/LandingPage/imagemHome.png';
+import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
+import { SectionServices } from "../../Components/LandingPage/SectionServices";
 
 export default function LandingPage() {
     const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' })
 
     return (
         <>
+        <Background>
+                <TextInfo/>
+                <ContainerImage>
+                    <img src={imgHome} alt=''/>
+                </ContainerImage>
+            </Background>
+
+            <Background>
+                <VideoPlayer/>
+            </Background>
+
+            <BackgroundServices>
+                <SectionServices/>
+            </BackgroundServices>
             {/***********************************************************
             *********************** CREMATION ***************************
             ************************************************************/}
@@ -69,7 +89,7 @@ export default function LandingPage() {
                         </CremationTextCard>
 
                         <Centralize>
-                            <Button text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
+                            <Button title="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
                         </Centralize>
                     </CremationTextContainer>
 
@@ -85,7 +105,7 @@ export default function LandingPage() {
                 <Carousel />
 
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: 50, marginBottom: 50 }}>
-                    <Button text="SAIBA MAIS SOBRE CADA PLANO" />
+                    <Button title="SAIBA MAIS SOBRE CADA PLANO" />
                 </div>
             </CarouselContainer>
 
@@ -106,9 +126,21 @@ export default function LandingPage() {
                 </CardContainer>
 
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
-                    <Button text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
+                    <Button title="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
                 </div>
             </div>
+        
+        
+
+            
+
+
+            {/* <Carousel /> */}
+
+            {/* <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: 50 }}>
+                <Button title="saiba mais sobre cada plano" />
+            </div> */}
+        
 
             {/***********************************************************
             ************************* FOOTER ****************************

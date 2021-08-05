@@ -1,24 +1,32 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+
+
+export const Wrapper = styled.div`
+    width: 100%;
+
+    button{
+        width: 400px;
+    height: 40px;
+    background-color: var(--green);
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-    background-color: #8cc539;
-    color: white;
-
-    width: 400px;
-    height: 45px;
-    border-radius: 20px;
     
-    transition: 0.25s;
-    margin-left: 20px;
-    margin-right: 20px;
 
-    &:hover{
-        background-color: #7bad33; 
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.9)
     }
-`;
-
-export const Image = styled.img``;
+    }
+`

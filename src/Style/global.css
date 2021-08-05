@@ -1,4 +1,5 @@
-* {
+
+*{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +30,7 @@ body {
 }
 
 body, input, textarea, select, button, div {
-    font: 400 1rem 'Roboto', sans-serif;
+    font: 400 1rem 'Poppins', sans-serif;
 }
 
 button {

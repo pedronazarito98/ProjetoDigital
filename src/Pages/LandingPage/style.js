@@ -114,14 +114,11 @@ export const CarouselContainer = styled.div`
   flex-direction: column;
   background-color: #f2f2fc;
 
-  padding-top: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  width: 100%;
+  // height: 100vh;
+  margin: 0 auto;
 
-  @media(max-width: 1024px) {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+  
 `;
 
 export const CardContainer = styled.div`
@@ -155,3 +152,30 @@ export const FooterContainer = styled.div`
     justify-content: center;
   }
 `;
+
+export const Background = styled.section`
+  width: 100%;
+  height: 500px;
+  display: flex;
+
+  background-color: var(--gold);
+
+`
+
+
+export const BackgroundServices = styled.section`
+  width: 100%;
+  height: 700px;
+  display: flex;
+
+  background-color:#eadbca;
+
+`
+
+export const ContainerImage = styled.div`
+  img{
+    height: 500px;
+    width: auto;
+    filter: 'brightness(0.9)',
+  }
+`
