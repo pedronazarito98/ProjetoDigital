@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const Centralize = styled.div`  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+/*************************************************************************************
+************************************ CREMAÇÃO ****************************************
+*************************************************************************************/
 export const CremationContainer = styled.div`  
   display: flex;
   flex-direction: row;
@@ -24,6 +34,37 @@ export const CremationContainer = styled.div`
   }
 `;
 
+export const CremationMobileContainer = styled.div`  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+`;
+
+export const CremationImageMobileContainer = styled.div`  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 300px;
+
+  background: #FFFFFF;
+  background: -webkit-radial-gradient(top right, #FFFFFF, #48669D);
+  background: -moz-radial-gradient(top right, #FFFFFF, #48669D);
+  background: radial-gradient(to bottom left, #FFFFFF, #48669D);
+
+  @media(max-width: 1150px) {
+    height: 450px;
+  }
+
+  @media(max-width: 565px) {
+    height: 350px;
+  }
+`;
+
 export const CremationTextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,6 +77,15 @@ export const CremationTextContainer = styled.div`
 
   height: 100%;
   width: 50%;
+
+  @media(max-width: 1150px) {
+    text-align: center;
+    height: 30%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    padding-left:  5%;
+    padding-right:  5%;
+  }
 `;
 
 export const CremationTextCard = styled.div`
@@ -52,10 +102,13 @@ export const CremationImage = styled.img`
     }
 
     @media(max-width: 565px) {
-      width: 320px;
+      width: 350px;
     }
 `;
 
+/*************************************************************************************
+************************************ CAROUSEL ****************************************
+*************************************************************************************/
 export const CarouselContainer = styled.div`  
   display: flex;
   flex-direction: column;
@@ -78,11 +131,27 @@ export const CardContainer = styled.div`
   justify-content: center;
   background-color: white;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
 
   @media(max-width: 985px) {
     flex-direction: column;
     height: 100%;
+  }
+`;
+
+export const FooterContainer = styled.div`
+  display: flex;
+  flex-Direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: #203F89;
+  height: 200px;
+
+  @media(max-width: 985px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;

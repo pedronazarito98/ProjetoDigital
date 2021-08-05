@@ -1,11 +1,11 @@
-import { GlobalContainer } from "./Style/globalStyle";
 import LandingPage from "./Pages/LandingPage";
+import './Style/global.css';
 
 function App() {
   return (
-    <GlobalContainer>
+    <>
       <LandingPage />
-    </GlobalContainer>
+    </>
   );
 }
 

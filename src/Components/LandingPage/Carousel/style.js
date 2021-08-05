@@ -6,7 +6,7 @@ export const Card = styled.div`
   align-items: center;
 
   height:${props => props.increase ? 375 : 350}px;
-  width: ${props => props.increase ? 65 : 60}%;
+  width: ${props => props.increase ? 100 : 90}%;
   border-radius: 10px;
   background-color: #f2f2fc;
   padding: 10px;
@@ -19,7 +19,7 @@ export const Card = styled.div`
 
   &:hover{
     height: 375px;
-    width: 65%;
+    width: 100%;
   }
 `;
 
@@ -28,4 +28,5 @@ export const Image = styled.img`
   height: 80px;
   border-radius: 200px;
   margin-top: 20px;
+  margin-bottom: 20px;
 `;
