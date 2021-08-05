@@ -5,12 +5,27 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: #f2f2fc;
 
-  padding-top: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
 
-  @media(max-width: 1024px) {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+  
 `;
+
+
+export const Background = styled.section`
+  width: 100%;
+  height: 500px;
+  display: flex;
+
+  background-color: var(--gold);
+
+`
+
+export const ContainerImage = styled.div`
+  img{
+    height: 500px;
+    width: auto;
+    filter: 'brightness(0.9)',
+  }
+`

@@ -1,6 +1,8 @@
-import { Container } from "./style";
+import { Background, Container, ContainerImage } from "./style";
 import Carousel from "../../Components/LandingPage/Carousel";
-import Button from "../../Components/LandingPage/Button";
+import {Button} from "../../Components/LandingPage/Button";
+import { TextInfo } from "../../Components/LandingPage/TextInfo";
+import imgHome from '../../Assets/LandingPage/imagemHome.png';
 
 export default function LandingPage() {
 
@@ -9,10 +11,19 @@ export default function LandingPage() {
         *********************** CAROUSEL ***************************
         ************************************************************/
         <Container>
-            <Carousel />
+
+            <Background>
+                <TextInfo/>
+                <ContainerImage>
+                    <img src={imgHome} alt=''/>
+                </ContainerImage>
+            </Background>
+
+
+            {/* <Carousel /> */}
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: 50 }}>
-                <Button text="SAIBA MAIS SOBRE CADA PLANO" />
+                <Button title="saiba mais sobre cada plano" />
             </div>
         </Container>
 

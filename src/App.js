@@ -1,11 +1,17 @@
-import { GlobalContainer } from "./Style/globalStyle";
+// import { GlobalContainer } from "./Style/globalStyle";
 import LandingPage from "./Pages/LandingPage";
+import { Navbar } from "./Components/LandingPage/NavBar";
+
+import './Style/global.css';
 
 function App() {
   return (
-    <GlobalContainer>
+    <>
+      <Navbar/>
       <LandingPage />
-    </GlobalContainer>
+    {/* <GlobalContainer/> */}
+    </>
+    
   );
 }
 
