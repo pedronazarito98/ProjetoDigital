@@ -13,7 +13,7 @@ export default function Cards() {
                     <Image src={title} alt={plan.title} />
                     <Image src={plan.img} alt={plan.title} style={{ marginLeft: -239, marginBottom: 23}}/>
 
-                    <h2 style={{ marginTop: -55, marginLeft: 35, color: "#101c85" }}>{plan.title}</h2>
+                    <h3 style={{ marginTop: -58, marginLeft: 35, color: "#101c85" }}>{plan.title}</h3>
 
                     <Text>
                         {plan.text}

@@ -23,6 +23,7 @@ export const Image = styled.img`
 export const Text = styled.div`
   width: 100%;
   text-align: justify;
-  font-size: 17px;
+  line-height: 25px;
+  font-size: 13px;
   margin-top: 12px;
 `;

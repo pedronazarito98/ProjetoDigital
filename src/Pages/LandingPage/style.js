@@ -114,11 +114,30 @@ export const CarouselContainer = styled.div`
   flex-direction: column;
   background-color: #f2f2fc;
 
-  width: 100%;
-  // height: 100vh;
-  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
 
-  
+  @media(max-width: 1024px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+`;
+
+/*************************************************************************************
+*************************************** CARDS ****************************************
+*************************************************************************************/
+export const CardSessionContainer = styled.div`
+  display: flex;
+  flex-Direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color:#45536b;
+
+  margin-top: 20px;
+  padding: 10px;
+  margin-bottom: 50px;
 `;
 
 export const CardContainer = styled.div`
@@ -126,10 +145,14 @@ export const CardContainer = styled.div`
   flex-Direction: row;
   align-items: center;
   justify-content: center;
+
   background-color: white;
+
   width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  color:#45536b;
 
   @media(max-width: 985px) {
     flex-direction: column;
@@ -137,6 +160,9 @@ export const CardContainer = styled.div`
   }
 `;
 
+/*************************************************************************************
+*************************************** FOOTER ***************************************
+*************************************************************************************/
 export const FooterContainer = styled.div`
   display: flex;
   flex-Direction: row;
@@ -153,6 +179,9 @@ export const FooterContainer = styled.div`
   }
 `;
 
+/*************************************************************************************
+*************************************** OTHERS ***************************************
+*************************************************************************************/
 export const Background = styled.section`
   width: 100%;
   height: 500px;
@@ -160,8 +189,7 @@ export const Background = styled.section`
 
   background-color: var(--gold);
 
-`
-
+`;
 
 export const BackgroundServices = styled.section`
   width: 100%;
@@ -169,13 +197,12 @@ export const BackgroundServices = styled.section`
   display: flex;
 
   background-color:#eadbca;
-
-`
+`;
 
 export const ContainerImage = styled.div`
   img{
     height: 500px;
     width: auto;
-    filter: 'brightness(0.9)',
+    filter: 'brightness(0.9)';
   }
-`
+`;

@@ -5,7 +5,7 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
 
-  height:${props => props.increase ? 375 : 350}px;
+  height:${props => props.increase ? 400 : 390}px;
   width: ${props => props.increase ? 100 : 90}%;
   border-radius: 10px;
   background-color: #f2f2fc;
@@ -18,7 +18,7 @@ export const Card = styled.div`
   transition: 0.25s;
 
   &:hover{
-    height: 375px;
+    height: 400px;
     width: 100%;
   }
 `;

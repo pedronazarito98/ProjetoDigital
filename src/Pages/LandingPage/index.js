@@ -8,14 +8,15 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
 import Carousel from "../../Components/LandingPage/Carousel";
-import {Button} from "../../Components/LandingPage/Button";
+import { Button } from "../../Components/LandingPage/Button";
+import ButtonPSP from "../../Components/LandingPage/ButtonPSP";
 import Cards from "../../Components/LandingPage/Cards";
 //Tags Estilizadas ******************************************************************
 import {
     Centralize,
     CremationContainer, CremationMobileContainer, CremationImageMobileContainer, CremationTextContainer, CremationTextCard, CremationImage,
     CarouselContainer,
-    CardContainer,
+    CardSessionContainer, CardContainer,
     FooterContainer
 } from "./style";
 //Mocks *****************************************************************************
@@ -39,19 +40,19 @@ export default function LandingPage() {
 
     return (
         <>
-        <Background>
-                <TextInfo/>
+            <Background>
+                <TextInfo />
                 <ContainerImage>
-                    <img src={imgHome} alt=''/>
+                    <img src={imgHome} alt='' />
                 </ContainerImage>
             </Background>
 
             <Background>
-                <VideoPlayer/>
+                <VideoPlayer />
             </Background>
 
             <BackgroundServices>
-                <SectionServices/>
+                <SectionServices />
             </BackgroundServices>
             {/***********************************************************
             *********************** CREMATION ***************************
@@ -104,15 +105,15 @@ export default function LandingPage() {
             <CarouselContainer>
                 <Carousel />
 
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: 50, marginBottom: 50 }}>
-                    <Button title="SAIBA MAIS SOBRE CADA PLANO" />
-                </div>
+                <Centralize style={{ marginTop: 30, marginBottom: 50 }}>
+                    <ButtonPSP text="SAIBA MAIS SOBRE CADA PLANO" />
+                </Centralize>
             </CarouselContainer>
 
             {/***********************************************************
             ************************* CARDS ****************************
             ************************************************************/}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", marginTop: 20, padding: 10, marginBottom: 50 }}>
+            <CardSessionContainer>
                 <div style={{ textAlign: "center" }}>
                     <h2>Se você não tem um plano funerário,<br />quais são as suas opções?</h2>
                     <div style={{ fontSize: 17, marginTop: 10 }}>
@@ -125,22 +126,10 @@ export default function LandingPage() {
                     <Cards />
                 </CardContainer>
 
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
-                    <Button title="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
-                </div>
-            </div>
-        
-        
-
-            
-
-
-            {/* <Carousel /> */}
-
-            {/* <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: 50 }}>
-                <Button title="saiba mais sobre cada plano" />
-            </div> */}
-        
+                <Centralize>
+                    <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
+                </Centralize>
+            </CardSessionContainer>
 
             {/***********************************************************
             ************************* FOOTER ****************************

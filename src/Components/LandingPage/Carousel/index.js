@@ -16,8 +16,8 @@ export default function EmployeesSection() {
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "400px"}}>
                     <Card increase={false}>
                         <Image src={employee.img} alt="Texto Alternativo" />
-                        <h3>{employee.name}</h3>
-                        <div style={{ textAlign: "center", padding: 10, marginTop: 10 }}>
+                        <h3 style={{color: "#45536b"}}>{employee.name}</h3>
+                        <div style={{ textAlign: "center", padding: 10, marginTop: 10, fontSize: 12, lineHeight: "25px", color: "#45536b" }}>
                             {employee.description}
                         </div>
                     </Card>
