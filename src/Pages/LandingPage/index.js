@@ -82,15 +82,14 @@ export default function LandingPage() {
 
             {isTabletOrMobile ?
                 <CremationContainer>
-
                     <CremationTextContainer>
                         <CremationTextCard>
                             <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
 
-                        <Centralize>
-                            <Button title="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
+                        <Centralize style={{ marginTop: 10}}>
+                            <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
                         </Centralize>
                     </CremationTextContainer>
 

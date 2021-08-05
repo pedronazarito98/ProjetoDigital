@@ -72,9 +72,10 @@ export const CremationTextContainer = styled.div`
   justify-content: flex-start;
 
   text-align: justify;
-
-  padding-top: 10%;
-
+  color:#45536b;
+  letter-spacing: 0.5px;
+  padding-top: 4%;
+  
   height: 100%;
   width: 50%;
 
@@ -117,6 +118,9 @@ export const CarouselContainer = styled.div`
   padding-top: 50px;
   padding-left: 200px;
   padding-right: 200px;
+
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
 
   @media(max-width: 1024px) {
     padding-left: 0px;
