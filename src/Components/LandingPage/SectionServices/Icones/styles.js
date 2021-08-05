@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     border-radius: 50%;
 
     padding: 10px;
-    margin: 10px;
+    margin: 25px;
 
     display: flex;
     align-items: center;
@@ -17,8 +17,9 @@ export const Wrapper = styled.div`
 
     span{
         color: var(--white);
-        font-size: 1.3rem;
-        text-align: center
+        font-size: 0.9rem;
+        text-align: center;
+        margin-top: 15px;
     }
 `;
 
@@ -36,6 +37,6 @@ export const Icon = styled.div`
     svg{
         height:30px;
         width:30px;
-        color: blue;
+        color: var(--black);
     }
 `;

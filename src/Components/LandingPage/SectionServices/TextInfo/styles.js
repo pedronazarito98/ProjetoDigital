@@ -12,6 +12,8 @@ export const ContainerText = styled.div`
     align-items: flex-start;
     align-content:flex-start;
     justify-content:flex-start;
+
+    color: var(--textColor);
     
     h1{
         font-size: 1.5rem;

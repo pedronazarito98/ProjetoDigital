@@ -12,6 +12,8 @@ export const ContainerText = styled.div`
     align-items: flex-start;
     align-content:flex-start;
     justify-content:flex-start;
+
+    color: var(--textColor);
     
     h1{
         font-size: 1.5rem;
@@ -22,12 +24,12 @@ export const ContainerText = styled.div`
     p {
         margin-bottom: 10px;
         line-height: 20px;
-        font-size:0.8rem;
+        font-size:0.9rem;
     }
 
     h2 {
         margin-bottom: 20px;
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: bold;
     }
 `
