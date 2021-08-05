@@ -27,7 +27,7 @@ import {
     cremationText02
 } from "../../Mocks/LandingPage/mock.js";
 //***********************************************************************************
-import { Background, BackgroundServices, Container, ContainerImage } from "./style";
+import { Background, BackgroundServices, ContainerImage } from "./style";
 
 import { TextInfo } from "../../Components/LandingPage/TextInfo";
 import imgHome from '../../Assets/LandingPage/imagemHome.png';

@@ -3,23 +3,23 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   width: 100%;
   height: 5rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+
+  padding: 0 14.5rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   background-color:var(--gold);
   
   
 
   
   .logo {
-    padding: 15px 0;
+    padding-top: 15px;
     
     img{
       height:65px;
-        width:130px;
+        width:207px;
     }
    
   }

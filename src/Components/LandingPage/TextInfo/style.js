@@ -14,7 +14,7 @@ export const ContainerText = styled.div`
     justify-content:flex-start;
     
     h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: var(--blue);
         font-weight: normal;
         margin-bottom: 10px;
@@ -22,11 +22,12 @@ export const ContainerText = styled.div`
     p {
         margin-bottom: 10px;
         line-height: 20px;
+        font-size:0.8rem;
     }
 
     h2 {
         margin-bottom: 20px;
-        font-size: 1.35rem;
+        font-size: 1.2rem;
         font-weight: 500;
     }
 `

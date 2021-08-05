@@ -5,7 +5,7 @@ export const ContainerText = styled.div`
     width: 500px;
     height: 500px;
     
-    padding: 20px 2rem;
+    // padding: 5px 2rem;
     margin: 34px 10px 0px 212px;
 
     flex-direction: column;
@@ -14,19 +14,20 @@ export const ContainerText = styled.div`
     justify-content:flex-start;
     
     h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: var(--blue);
-        font-weight: normal;
+        font-weight: bold;
         margin-bottom: 10px;
     }
     p {
         margin-bottom: 10px;
         line-height: 20px;
+        font-size: 1rem;
     }
 
     h2 {
         margin-bottom: 20px;
-        font-size: 1.35rem;
+        font-size: 1rem;
         font-weight: 500;
     }
 
@@ -34,7 +35,7 @@ export const ContainerText = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 10px;
+        margin: 15px;
 
         svg{
             height: 75px;
