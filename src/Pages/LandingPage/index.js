@@ -1,8 +1,9 @@
-import { Background, Container, ContainerImage } from "./style";
-import Carousel from "../../Components/LandingPage/Carousel";
-import {Button} from "../../Components/LandingPage/Button";
+import { Background, BackgroundServices, Container, ContainerImage } from "./style";
+
 import { TextInfo } from "../../Components/LandingPage/TextInfo";
 import imgHome from '../../Assets/LandingPage/imagemHome.png';
+import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
+import { SectionServices } from "../../Components/LandingPage/SectionServices";
 
 export default function LandingPage() {
 
@@ -19,12 +20,20 @@ export default function LandingPage() {
                 </ContainerImage>
             </Background>
 
+            <Background>
+                <VideoPlayer/>
+            </Background>
+
+            <BackgroundServices>
+                <SectionServices/>
+            </BackgroundServices>
+
 
             {/* <Carousel /> */}
 
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: 50 }}>
+            {/* <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: 50 }}>
                 <Button title="saiba mais sobre cada plano" />
-            </div>
+            </div> */}
         </Container>
 
         /***********************************************************  

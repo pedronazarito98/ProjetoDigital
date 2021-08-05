@@ -29,4 +29,21 @@ export const ContainerText = styled.div`
         font-size: 1.35rem;
         font-weight: 500;
     }
+
+    article{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px;
+
+        svg{
+            height: 75px;
+            width: 135px;
+            border-radius:50px;
+            padding: 10px;
+            border: 3px solid var(--gold);
+            margin-right: 10px;
+            color: var(--blue);
+        }
+    }
 `

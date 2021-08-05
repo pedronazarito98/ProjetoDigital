@@ -6,7 +6,7 @@ export const Container = styled.div`
   background-color: #f2f2fc;
 
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   margin: 0 auto;
 
   
@@ -19,6 +19,16 @@ export const Background = styled.section`
   display: flex;
 
   background-color: var(--gold);
+
+`
+
+
+export const BackgroundServices = styled.section`
+  width: 100%;
+  height: 700px;
+  display: flex;
+
+  background-color:#eadbca;
 
 `
 

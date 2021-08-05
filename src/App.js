@@ -1,4 +1,3 @@
-// import { GlobalContainer } from "./Style/globalStyle";
 import LandingPage from "./Pages/LandingPage";
 import { Navbar } from "./Components/LandingPage/NavBar";
 
@@ -9,7 +8,6 @@ function App() {
     <>
       <Navbar/>
       <LandingPage />
-    {/* <GlobalContainer/> */}
     </>
     
   );

@@ -2,8 +2,14 @@ import {  ContainerText } from "./style";
 
 import {Button}  from '../Button/index'
 
-export function TextInfo() {
-
+export function TextInfo(props) {
+    const {
+        title, 
+        firstParagraph,
+        secondaryParagraph,
+        footerParagraph,
+        children
+    } = props;
     return(
         <ContainerText>
             <h1>
@@ -28,10 +34,6 @@ export function TextInfo() {
                 Quem vai amparar a sua família no momento mais dificil?
             </h2>
             <Button title='saiba mais sobre cada plano'/>
-        {/* <Button>
-            <span>Saiba mais sobre cada Plano</span>
-            <img src={Arrow} alt="" />
-        </Button> */}
         </ContainerText>
     )
 }
