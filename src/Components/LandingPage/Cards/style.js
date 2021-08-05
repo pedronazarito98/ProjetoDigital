@@ -6,13 +6,7 @@ export const Card = styled.div`
   height: 200px;
   border-radius: 20px;
   padding: 10px; 
-  margin-left: 50px;
-
-  @media(max-width: 985px) {
-    flex-direction: column;
-    margin-top: 50px;
-    margin-left: 0px;
-  }
+  margin: 20px;
 `;
 
 export const Image = styled.img`

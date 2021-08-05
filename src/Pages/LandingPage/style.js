@@ -90,7 +90,6 @@ export const CremationTextContainer = styled.div`
 `;
 
 export const CremationTextCard = styled.div`
-    margin-bottom: 20px;
     width: 345px;
 `;
 
@@ -149,6 +148,7 @@ export const CardContainer = styled.div`
   flex-Direction: row;
   align-items: center;
   justify-content: center;
+	flex-wrap: wrap;
 
   background-color: white;
 
@@ -157,11 +157,6 @@ export const CardContainer = styled.div`
   margin-bottom: 50px;
 
   color:#45536b;
-
-  @media(max-width: 985px) {
-    flex-direction: column;
-    height: 100%;
-  }
 `;
 
 /*************************************************************************************

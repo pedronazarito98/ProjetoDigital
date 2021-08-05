@@ -8,13 +8,12 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
 import Carousel from "../../Components/LandingPage/Carousel";
-import { Button } from "../../Components/LandingPage/Button";
 import ButtonPSP from "../../Components/LandingPage/ButtonPSP";
 import Cards from "../../Components/LandingPage/Cards";
 //Tags Estilizadas ******************************************************************
 import {
     Centralize,
-    CremationContainer, CremationMobileContainer, CremationImageMobileContainer, CremationTextContainer, CremationTextCard, CremationImage,
+    CremationContainer, CremationImageMobileContainer, CremationTextContainer, CremationTextCard, CremationImage,
     CarouselContainer,
     CardSessionContainer, CardContainer,
     FooterContainer
@@ -59,19 +58,17 @@ export default function LandingPage() {
             ************************************************************/}
             {!isTabletOrMobile ?
                 <>
-                    <CremationMobileContainer>
+                    <Centralize style={{ marginTop: 10 }}>
                         <CremationTextContainer>
-                            <CremationTextCard>
-                                <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
-                                <div>
-                                    <b>{cremationBoldText}</b>
-                                    {cremationText01}
-                                    <br /><br />
-                                    {cremationText02}
-                                </div>
-                            </CremationTextCard>
+                            <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
+                            <div>
+                                <b>{cremationBoldText}</b>
+                                {cremationText01}
+                                <br /><br />
+                                {cremationText02}
+                            </div>
                         </CremationTextContainer>
-                    </CremationMobileContainer>
+                    </Centralize>
 
                     <CremationImageMobileContainer>
                         <CremationImage src={Woman} />
@@ -88,7 +85,7 @@ export default function LandingPage() {
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
 
-                        <Centralize style={{ marginTop: 10}}>
+                        <Centralize style={{ marginTop: 10 }}>
                             <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
                         </Centralize>
                     </CremationTextContainer>
@@ -136,17 +133,19 @@ export default function LandingPage() {
             <FooterContainer>
                 <img src={Logo} alt="Logo do Grupo Zelo" />
                 <br />
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginLeft: 2, marginRight: 2 }}>
-                    <div style={{ fontSize: 15, color: "white" }}>POLÍTICA DE PRIVACIDADE</div>
-                    <a href="https://www.instagram.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 20 }}>
-                        <img src={Instagram} alt="Logo do Grupo Zelo" style={{ width: 40, height: 40 }} />
-                    </a>
-                    <a href="https://www.youtube.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
-                        <img src={Youtube} alt="Logo do Grupo Zelo" style={{ width: 35, height: 35 }} />
-                    </a>
-                    <a href="https://www.facebook.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
-                        <img src={Facebook} alt="Logo do Grupo Zelo" style={{ width: 35, height: 35 }} />
-                    </a>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", marginLeft: 2, marginRight: 2 }}>
+                    <div style={{ fontSize: 15, color: "white" }}>POLÍTICA DE PRIVACIDADE</div><br/><br/>
+                    <Centralize>
+                        <a href="https://www.instagram.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 20 }}>
+                            <img src={Instagram} alt="Instagram do Grupo Zelo" style={{ width: 40, height: 40 }} />
+                        </a>
+                        <a href="https://www.youtube.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
+                            <img src={Youtube} alt="Youtube do Grupo Zelo" style={{ width: 35, height: 35 }} />
+                        </a>
+                        <a href="https://www.facebook.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
+                            <img src={Facebook} alt="Facebook do Grupo Zelo" style={{ width: 35, height: 35 }} />
+                        </a>
+                    </Centralize>
                 </div>
             </FooterContainer>
         </>
