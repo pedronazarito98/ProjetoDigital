@@ -3,6 +3,8 @@ import { Navbar } from "./Components/LandingPage/NavBar";
 
 import './Style/global.css';
 
+
+
 function App() {
   return (
     <>

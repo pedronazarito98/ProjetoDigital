@@ -179,6 +179,32 @@ export const FooterContainer = styled.div`
 `;
 
 /*************************************************************************************
+*************************************** Formulário ***************************************
+*************************************************************************************/
+
+export const WrapperTitle = styled.div`
+  // background: red;
+  width: 100%;
+  max-width:210px;
+  height:100%;
+  padding: 10px;
+
+  span{
+    color: var(--gold);
+  }
+
+  h1{
+    border-bottom: 2px solid var(--gold);
+    width: 22px;
+
+    color: var(--gold);
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+  }
+` 
+
+/*************************************************************************************
 *************************************** OTHERS ***************************************
 *************************************************************************************/
 export const Background = styled.section`
@@ -191,6 +217,18 @@ export const Background = styled.section`
 
   background-color: var(--gold);
 
+`;
+
+export const BackgroundForm = styled.section`
+width: 100%;
+height: 100%;
+display: flex;
+padding: 10px;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+
+background-color: var(--blue);
 `;
 
 export const BackgroundServices = styled.section`

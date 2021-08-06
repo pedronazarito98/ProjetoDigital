@@ -16,8 +16,11 @@ import {
     CremationContainer, CremationImageMobileContainer, CremationTextContainer, CremationTextCard, CremationImage,
     CarouselContainer,
     CardSessionContainer, CardContainer,
-    FooterContainer
+    FooterContainer,
+    BackgroundForm,
+    WrapperTitle
 } from "./style";
+
 //Mocks *****************************************************************************
 import {
     cremationTitle01,
@@ -33,6 +36,7 @@ import { TextInfo } from "../../Components/LandingPage/TextInfo";
 import imgHome from '../../Assets/LandingPage/imagemHome.png';
 import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
 import { SectionServices } from "../../Components/LandingPage/SectionServices";
+import { Formulario } from "../../Components/LandingPage/Formulario";
 
 export default function LandingPage() {
     const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' })
@@ -53,6 +57,17 @@ export default function LandingPage() {
             <BackgroundServices>
                 <SectionServices />
             </BackgroundServices>
+
+            <BackgroundForm>
+                <WrapperTitle>
+                    <span>Você está a um passo de conhecer o seu</span>
+                    <h1>Plano <br/>
+                        <strong> ideal</strong> 
+                    </h1>
+                </WrapperTitle>
+
+                <Formulario/>
+            </BackgroundForm>
             {/***********************************************************
             *********************** CREMATION ***************************
             ************************************************************/}
