@@ -81,10 +81,13 @@ export default function LandingPage() {
 
                 <Formulario/>
             </BackgroundForm>
-            <DucashContainer>
-                <img src={OldWoman} width="381px" height="504px" alt='OldWoman' />
-                <DucashTextContainer>
 
+            {/***********************************************************
+            ************************* DUCASH ****************************
+            ************************************************************/}
+            <DucashContainer>
+                <img src={OldWoman} width="360px" height="483px" alt='OldWoman' />
+                <DucashTextContainer>
                     <img src={Ducash} alt='Ducash'/>
 
                     <div>
@@ -95,9 +98,9 @@ export default function LandingPage() {
 
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                             <div><b>+1.500.000</b><br />Clientes<br />Atendidos</div>
-                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div style={{ height: "60px", borderRight: "2px solid #ca8211" }} />
                             <div><b>+2.100.000</b><br />Parceiros</div>
-                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div style={{ height: "60px", borderRight: "2px solid #ca8211" }} />
                             <div><b>+600</b><br />Cidades<br />Atendidas</div>
                         </div>
                     </div>
