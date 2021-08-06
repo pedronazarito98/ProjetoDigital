@@ -25,7 +25,6 @@ export const DucashContainer = styled.div`
   @media(max-width: 896px) {
     height: 820px; 
     align-items: stretch; 
-
   }
 `;
 
@@ -39,13 +38,22 @@ export const DucashTextContainer = styled.div`
     width: 45%;
   }
 
-  @media(max-width: 768px) {
+  @media(max-width: 896px) {
     margin-top: 20px;
     width: 100%;
     margin-left: 0px;
   }
 `;
 
+export const DucashIMG = styled.img`  
+   width:381px; 
+   height:504px;
+
+  @media(max-width: 896px) {
+    width:360px; 
+    height:483px;
+  }
+`;
 /*************************************************************************************
 ************************************ CREMAÇÃO ****************************************
 *************************************************************************************/
@@ -242,7 +250,7 @@ export const WrapperTitle = styled.div`
     text-transform: uppercase;
     line-height: 1.5rem;
   }
-` 
+`
 
 /*************************************************************************************
 *************************************** OTHERS ***************************************

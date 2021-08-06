@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Carousel from "react-multi-carousel";
 import { Image, Card } from "./style";
 import "react-multi-carousel/lib/styles.css";
@@ -6,11 +6,7 @@ import { employees } from "../../../Services/api";
 import { responsive } from "../../../Mocks/LandingPage/mock";
 
 export default function EmployeesSection() {
-    const [currentCard, setCurrentCard] = useState(employees.length-1);
-
-    useEffect(() => {
-        generateCards();
-    }, [currentCard]);
+    const [currentCard, setCurrentCard] = useState(employees.length - 1);
 
     function generateCards() {
         let componentArray = [];
@@ -55,11 +51,11 @@ export default function EmployeesSection() {
         <Carousel
             beforeChange={(nextSlide, { currentSlide, onMove }) => {
                 setCurrentCard(currentSlide - employees.length);
-                console.log(currentSlide - employees.length);
+                generateCards();
             }}
             infinite
             responsive={responsive}
-            /* autoPlay */
+            autoPlay
             swipeable
             removeArrowOnDeviceType={["tablet", "mobile"]}
         >
