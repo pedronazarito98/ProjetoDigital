@@ -28,6 +28,14 @@ export default function EmployeesSection() {
         return componentArray;
     }
 
+    const CustomLeftArrow = ({ onClick }) => (
+        <i onClick={() => onClick()} className="custom-left-arrow" />
+    );
+    const CustomRightArrow = ({ onClick }) => {
+        return <i className="custom-right-arrow" onClick={() => onClick()} />;
+    };
+
+
     return (
         <Carousel
             beforeChange={(nextSlide, { currentSlide, onMove }) => {
@@ -35,7 +43,6 @@ export default function EmployeesSection() {
                 console.log(nextSlide - employees.length);
             }}
             infinite
-            arrows
             responsive={responsive}
             autoPlay
             swipeable
