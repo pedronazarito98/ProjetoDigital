@@ -3,10 +3,8 @@ import styled from "styled-components";
 export const ContainerText = styled.div`
     display: flex;
     width: 500px;
-    height: 500px;
-    
-    // padding: 5px 2rem;
-    margin: 34px 10px 0px 212px;
+
+    margin: 10px 10px 0px ;
 
     flex-direction: column;
     align-items: flex-start;
@@ -49,4 +47,10 @@ export const ContainerText = styled.div`
             color: var(--blue);
         }
     }
-`
+
+    @media (max-width: 822px) {
+        padding: 50px;
+        width: 400px;
+    }
+
+`;

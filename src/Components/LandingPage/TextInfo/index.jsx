@@ -2,14 +2,7 @@ import {  ContainerText } from "./style";
 
 import {Button}  from '../Button/index'
 
-export function TextInfo(props) {
-    const {
-        title, 
-        firstParagraph,
-        secondaryParagraph,
-        footerParagraph,
-        children
-    } = props;
+export function TextInfo() {
     return(
         <ContainerText>
             <h1>
