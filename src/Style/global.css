@@ -34,6 +34,10 @@ body, input, textarea, select, button, div {
     font: 400 1rem 'Poppins', sans-serif;
 }
 
+h1 {
+    font: 1.5rem 'Poppins', sans-serif;
+}
+
 button {
     cursor: pointer;
 }

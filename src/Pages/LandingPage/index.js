@@ -7,8 +7,8 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import Linkedin from "../../Assets/LandingPage/linkedin.png";
 import OldWoman from "../../Assets/LandingPage/oldWoman.png";
 import Ducash from "../../Assets/LandingPage/ducash.png";
-import { Button, Checkbox, Form } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
+import { Button, Checkbox, Form } from 'semantic-ui-react';
+// import 'semantic-ui-css/semantic.min.css';
 
 //Feature ***************************************************************************
 import { useMediaQuery } from 'react-responsive'
@@ -37,7 +37,7 @@ import {
     cremationText02
 } from "../../Mocks/LandingPage/mock.js";
 //***********************************************************************************
-import { Background, BackgroundServices, ContainerImage } from "./style";
+import { Background, BackgroundServices } from "./style";
 
 import { TextInfo } from "../../Components/LandingPage/TextInfo";
 import imgHome from '../../Assets/LandingPage/imagemHome.png';
@@ -58,9 +58,9 @@ export default function LandingPage() {
         <>
             <Background>
                 <TextInfo />
-                <ContainerImage>
+                
                     <img src={imgHome} alt='' />
-                </ContainerImage>
+                
             </Background>
 
             <Background>
@@ -82,10 +82,10 @@ export default function LandingPage() {
                 <Formulario/>
             </BackgroundForm>
             <DucashContainer>
-                <img src={OldWoman} width="381px" height="504px"></img>
+                <img src={OldWoman} width="381px" height="504px" alt='OldWoman' />
                 <DucashTextContainer>
 
-                    <img src={Ducash}></img>
+                    <img src={Ducash} alt='Ducash'/>
 
                     <div>
                         <b>Cliente Grupo Zelo tem benefícios em vida com o Clube de Descontos do Ducash</b> que dá
@@ -103,21 +103,6 @@ export default function LandingPage() {
                     </div>
                 </DucashTextContainer>
             </DucashContainer>
-
-            <Form>
-                <Form.Field>
-                    <label>First Name</label>
-                    <input placeholder='First Name' />
-                </Form.Field>
-                <Form.Field>
-                    <label>Last Name</label>
-                    <input placeholder='Last Name' />
-                </Form.Field>
-                <Form.Field>
-                    <Checkbox label='I agree to the Terms and Conditions' />
-                </Form.Field>
-                <Button type='submit'>Submit</Button>
-            </Form>
 
             {/***********************************************************
             *********************** CREMATION ***************************

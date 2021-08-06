@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const ContainerText = styled.div`
     display: flex;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
 
-    margin: 10px 10px 0px ;
+
+    
+    padding: 10px;
 
     flex-direction: column;
     align-items: flex-start;
@@ -15,14 +18,15 @@ export const ContainerText = styled.div`
     
     h1{
         font-size: 1.5rem;
-        color: var(--blue);
+        color: var(--textColor);
         font-weight: bold;
         margin-bottom: 10px;
     }
     p {
         margin-bottom: 10px;
         line-height: 20px;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        color: var(--textColor);
     }
 
     h2 {
@@ -37,6 +41,10 @@ export const ContainerText = styled.div`
         justify-content: space-between;
         margin: 15px;
 
+        span{
+            font-size: 0.9rem;
+        }
+
         svg{
             height: 75px;
             width: 135px;
@@ -47,10 +55,18 @@ export const ContainerText = styled.div`
             color: var(--blue);
         }
     }
-
-    @media (max-width: 822px) {
-        padding: 50px;
-        width: 400px;
+    @media(max-width:996px) {
+        max-width: 100%;
+  
+        text-align: center;
+        
+        align-items: center;
+        justify-content: center;
+  
+        p{
+            text-align: center;
+        }
     }
 
+   
 `;

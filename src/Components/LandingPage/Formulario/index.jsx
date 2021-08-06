@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Form } from 'semantic-ui-react'
-// import 'semantic-ui-css/semantic.min.css';
 
 export function Formulario() {
     const [value, setValue] = useState();

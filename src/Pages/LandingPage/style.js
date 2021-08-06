@@ -25,6 +25,7 @@ export const DucashContainer = styled.div`
   @media(max-width: 896px) {
     height: 820px; 
     align-items: stretch; 
+
   }
 `;
 
@@ -139,7 +140,7 @@ export const CremationImage = styled.img`
     }
 
     @media(max-width: 565px) {
-      width: 350px;
+      width: 300px;
     }
 `;
 
@@ -252,7 +253,25 @@ export const Background = styled.section`
   align-items: center;
   justify-content: center;
 
-  background-color: var(--gold);
+  background: -webkit-radial-gradient(top right,#d9a973ba,var(--gold));
+  img{
+    height: 500px;
+    width: auto;
+    filter: brightness(0.9);
+
+  }
+
+  @media (max-width: 500px) {
+    img {
+      height: 350px;  
+    }
+  }
+
+  @media(max-width:350px) {
+    img {
+      height: 250px
+    }
+  }
 
 `;
 
@@ -284,20 +303,3 @@ export const BackgroundServices = styled.section`
   }
 `;
 
-export const ContainerImage = styled.div`
-  img{
-    height: 500px;
-    width: auto;
-    filter: 'brightness(0.9)';
-
-    margin-top:50px;
-  }
-
-  @media (max-width: 500px) {
-    img {
-      height: 350px;
-      
-    }
-  }
-
-`;

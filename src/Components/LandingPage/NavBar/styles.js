@@ -1,32 +1,23 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-
   height: 5rem;
-
-  padding: 0 14.5rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color:var(--gold);
-    
+  width:100%;
+  background: linear-gradient(45deg, #d9a973e6, #d9a973c4);
 
     img{
+      margin-left: 200px;
       padding-top: 15px;
       height:65px;
-        width:207px;
+      width:207px;
     }
 
   @media (max-width: 600px) {
     display: flex;
     align-items: center;
     justify-content:center;
-
-    img{
-      height:50px;
+    img {
+      margin-left: 0px;
     }
-    
-
   }
 `

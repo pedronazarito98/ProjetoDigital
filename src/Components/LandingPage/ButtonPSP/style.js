@@ -8,7 +8,8 @@ export const Container = styled.div`
     background-color: #8cc539;
     color: white;
 
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 45px;
     border-radius: 20px;
     
