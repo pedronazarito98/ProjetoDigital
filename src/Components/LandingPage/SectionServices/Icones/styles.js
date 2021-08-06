@@ -9,11 +9,15 @@ export const Wrapper = styled.div`
     border-radius: 50%;
 
     padding: 10px;
-    margin: 25px;
+    margin: 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 50px 70px rgb(98 79 125 / 12%);
+    &:hover{
+        box-shadow: 2px 5px 12px 0 rgb(88 88 88 / 30%)
+    }
 
     span{
         color: var(--white);

@@ -1,15 +1,9 @@
 import { Button } from "../../Button";
 import { ContainerText } from "./styles";
 import { CgPhone } from "react-icons/cg";
+
 export function TextService() {
-    // const {
-    //     title, 
-    //     firstParagraph,
-    //     secondaryParagraph,
-    //     footerParagraph,
-    //     children
-    // } = props;
-    return(
+return(
         <ContainerText>
             <h1>
                 A mais completa do mercado, os melhores planos para você.

@@ -13,4 +13,9 @@ export const ContainerIcones = styled.div`
     align-content: center;
     justify-content: center;
     width: 100%;
+    max-width: 600px;
+
+    @media (max-width: 954px) {
+        margin-top: 30px;
+    }
 `

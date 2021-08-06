@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
     width: 100%;
 
     button{
-        width: 400px;
+        width: 100%;
+        max-width:400px;
     height: 40px;
     background-color: var(--green);
     padding: 10px;

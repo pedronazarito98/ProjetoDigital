@@ -1,7 +1,7 @@
 
 import { DataIcons } from "../../../Mocks/LandingPage/mock";
 import { Icones } from "./Icones";
-import { Container, ContainerIcones } from "./styles";
+import { ContainerIcones } from "./styles";
 import { TextService } from "./TextInfo";
 
 
@@ -9,21 +9,18 @@ import { TextService } from "./TextInfo";
 export function SectionServices() {
     return (
         <>
-            <Container>
+            <TextService />
 
-                <TextService />
+            <ContainerIcones>
 
-                <ContainerIcones>
+                {DataIcons.map((props) =>
 
-                    {DataIcons.map((props) =>
-
-                        <Icones
-                            icons={props.icon}
-                            text={props.content}
-                        />
-                    )}
-                </ContainerIcones>
-            </Container>
+                    <Icones
+                        icons={props.icon}
+                        text={props.content}
+                    />
+                )}
+            </ContainerIcones>
         </>
     )
 }

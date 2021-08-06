@@ -183,8 +183,11 @@ export const FooterContainer = styled.div`
 *************************************************************************************/
 export const Background = styled.section`
   width: 100%;
-  height: 500px;
+  height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
   background-color: var(--gold);
 
@@ -192,10 +195,18 @@ export const Background = styled.section`
 
 export const BackgroundServices = styled.section`
   width: 100%;
-  height: 700px;
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  padding: 30px;
 
   background-color:#eadbca;
+
+  @media(max-width:954px ){
+    flex-direction: column;
+    padding: 10px;
+  }
 `;
 
 export const ContainerImage = styled.div`
@@ -203,5 +214,15 @@ export const ContainerImage = styled.div`
     height: 500px;
     width: auto;
     filter: 'brightness(0.9)';
+
+    margin-top:50px;
   }
+
+  @media (max-width: 500px) {
+    img {
+      height: 350px;
+      
+    }
+  }
+
 `;

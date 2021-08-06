@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  width: 100%;
+
   height: 5rem;
 
   padding: 0 14.5rem;
@@ -10,17 +10,23 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: flex-start;
   background-color:var(--gold);
-  
-  
-
-  
-  .logo {
-    padding-top: 15px;
     
+
     img{
+      padding-top: 15px;
       height:65px;
         width:207px;
     }
-   
+
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    img{
+      height:50px;
+    }
+    
+
   }
 `

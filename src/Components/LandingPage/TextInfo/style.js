@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const ContainerText = styled.div`
     display: flex;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 500px;
     
     padding: 20px 2rem;
-    margin: 34px 10px 0px 212px;
+    margin: 34px 10px 0px ;
 
     flex-direction: column;
     align-items: flex-start;
@@ -31,5 +32,9 @@ export const ContainerText = styled.div`
         margin-bottom: 20px;
         font-size: 1.2rem;
         font-weight: bold;
+    }
+
+    @media (max-width: 1040px) {
+        width: 350px;
     }
 `
