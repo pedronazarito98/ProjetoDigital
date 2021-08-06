@@ -138,7 +138,7 @@ export default function LandingPage() {
                 <CremationContainer>
                     <CremationTextContainer>
                         <CremationTextCard>
-                            <h2 style={{ color: "#0D1D86" }}>{cremationTitle01}<br />{cremationTitle02}</h2><br />
+                            <h2 style={{ color: "var(--textColor)" }}>{cremationTitle01}<br />{cremationTitle02}</h2><br />
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
                         <br />
@@ -191,7 +191,7 @@ export default function LandingPage() {
                 <img src={Logo} alt="Logo do Grupo Zelo" style={{ marginTop: 20 }} />
                 <br />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", marginLeft: 2, marginRight: 2, marginBottom: 20 }}>
-                    <div style={{ fontSize: 15, color: "white", marginBottom: 20 }}>POLÍTICA DE PRIVACIDADE</div><br /><br />
+                    <div style={{ fontSize: 15, color: "white", marginBottom: 0 }}>POLÍTICA DE PRIVACIDADE</div><br /><br />
                     <Centralize>
                         <a href="https://www.instagram.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 20 }}>
                             <img src={Instagram} alt="Instagram do Grupo Zelo" style={{ width: 40, height: 40 }} />
