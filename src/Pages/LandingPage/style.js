@@ -74,7 +74,7 @@ export const CremationTextContainer = styled.div`
   text-align: justify;
   color:#45536b;
   letter-spacing: 0.5px;
-  padding-top: 4%;
+  padding-top: 2%;
   
   height: 100%;
   width: 50%;
@@ -169,7 +169,7 @@ export const FooterContainer = styled.div`
   justify-content: space-around;
 
   background-color: #203F89;
-  height: 200px;
+  height: 250px;
 
   @media(max-width: 985px) {
     flex-direction: column;

@@ -4,6 +4,9 @@ import Logo from "../../Assets/LandingPage/logo.png";
 import Facebook from "../../Assets/LandingPage/facebook.png";
 import Instagram from "../../Assets/LandingPage/instagram.png";
 import Youtube from "../../Assets/LandingPage/youtube.png";
+import Linkedin from "../../Assets/LandingPage/linkedin.png";
+import OldWoman from "../../Assets/LandingPage/oldWoman.png";
+import Ducash from "../../Assets/LandingPage/ducash.png";
 //Feature ***************************************************************************
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
@@ -35,7 +38,13 @@ import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
 import { SectionServices } from "../../Components/LandingPage/SectionServices";
 
 export default function LandingPage() {
-    const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' });
+
+    var settings = {
+        dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    };
 
     return (
         <>
@@ -53,6 +62,14 @@ export default function LandingPage() {
             <BackgroundServices>
                 <SectionServices />
             </BackgroundServices>
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "671px", width: "100%" }}>
+                <img src={OldWoman}></img>
+                <div>
+                    <img src={Ducash}></img>
+                </div>
+            </div>
+
             {/***********************************************************
             *********************** CREMATION ***************************
             ************************************************************/}
@@ -84,7 +101,7 @@ export default function LandingPage() {
                             <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
-
+                        <br />
                         <Centralize style={{ marginTop: 10 }}>
                             <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
                         </Centralize>
@@ -131,10 +148,10 @@ export default function LandingPage() {
             ************************* FOOTER ****************************
             ************************************************************/}
             <FooterContainer>
-                <img src={Logo} alt="Logo do Grupo Zelo" />
+                <img src={Logo} alt="Logo do Grupo Zelo" style={{ marginTop: 20 }} />
                 <br />
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", marginLeft: 2, marginRight: 2 }}>
-                    <div style={{ fontSize: 15, color: "white" }}>POLÍTICA DE PRIVACIDADE</div><br/><br/>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", marginLeft: 2, marginRight: 2, marginBottom: 20 }}>
+                    <div style={{ fontSize: 15, color: "white", marginBottom: 20 }}>POLÍTICA DE PRIVACIDADE</div><br /><br />
                     <Centralize>
                         <a href="https://www.instagram.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 20 }}>
                             <img src={Instagram} alt="Instagram do Grupo Zelo" style={{ width: 40, height: 40 }} />
@@ -144,6 +161,9 @@ export default function LandingPage() {
                         </a>
                         <a href="https://www.facebook.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
                             <img src={Facebook} alt="Facebook do Grupo Zelo" style={{ width: 35, height: 35 }} />
+                        </a>
+                        <a href="https://www.linkedin.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
+                            <img src={Linkedin} alt="Linkedin do Grupo Zelo" style={{ width: 30, height: 30 }} />
                         </a>
                     </Centralize>
                 </div>

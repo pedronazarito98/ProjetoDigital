@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import { Image, Card } from "./style";
 import "react-multi-carousel/lib/styles.css";
@@ -6,18 +6,41 @@ import { employees } from "../../../Services/api";
 import { responsive } from "../../../Mocks/LandingPage/mock";
 
 export default function EmployeesSection() {
-    const [currentCard, setCurrentCard] = useState(0);
+    const [currentCard, setCurrentCard] = useState(employees.length-1);
+
+    useEffect(() => {
+        generateCards();
+    }, [currentCard]);
 
     function generateCards() {
         let componentArray = [];
 
         employees.forEach((employee, index) => {
+            let justify = "center";
+            let increase = false;
+
+            if (currentCard === 0 && index === 1) { justify = "flex-end"; increase = false; }
+            if (currentCard === 0 && index === 2) { justify = "center"; increase = true; }
+            if (currentCard === 0 && index === 3) { justify = "flex-start"; increase = false; }
+
+            if (currentCard === 1 && index === 2) { justify = "flex-end"; increase = false; }
+            if (currentCard === 1 && index === 3) { justify = "center"; increase = true; }
+            if (currentCard === 1 && index === 0) { justify = "flex-start"; increase = false; }
+
+            if (currentCard === 2 && index === 3) { justify = "flex-end"; increase = false; }
+            if (currentCard === 2 && index === 0) { justify = "center"; increase = true; }
+            if (currentCard === 2 && index === 1) { justify = "flex-start"; increase = false; }
+
+            if (currentCard === 3 && index === 0) { justify = "flex-end"; increase = false; }
+            if (currentCard === 3 && index === 1) { justify = "center"; increase = true; }
+            if (currentCard === 3 && index === 2) { justify = "flex-start"; increase = false; }
+
             componentArray.push(
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "400px" }}>
-                    <Card increase={false}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: justify, width: "95%", height: "400px" }}>
+                    <Card increase={increase}>
                         <Image src={employee.img} alt="Texto Alternativo" />
                         <h3 style={{ color: "#45536b" }}>{employee.name}</h3>
-                        <div style={{ textAlign: "center", padding: 10, marginTop: 10, fontSize: 12, lineHeight: "25px", color: "#45536b" }}>
+                        <div style={{ textAlign: "center", padding: 10, marginTop: 10, fontSize: "1rem", lineHeight: "25px", color: "#45536b" }}>
                             {employee.description}
                         </div>
                     </Card>
@@ -28,23 +51,15 @@ export default function EmployeesSection() {
         return componentArray;
     }
 
-    const CustomLeftArrow = ({ onClick }) => (
-        <i onClick={() => onClick()} className="custom-left-arrow" />
-    );
-    const CustomRightArrow = ({ onClick }) => {
-        return <i className="custom-right-arrow" onClick={() => onClick()} />;
-    };
-
-
     return (
         <Carousel
             beforeChange={(nextSlide, { currentSlide, onMove }) => {
-                setCurrentCard(nextSlide - employees.length);
-                console.log(nextSlide - employees.length);
+                setCurrentCard(currentSlide - employees.length);
+                console.log(currentSlide - employees.length);
             }}
             infinite
             responsive={responsive}
-            autoPlay
+            /* autoPlay */
             swipeable
             removeArrowOnDeviceType={["tablet", "mobile"]}
         >
