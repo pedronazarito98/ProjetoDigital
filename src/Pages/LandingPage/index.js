@@ -7,6 +7,9 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import Linkedin from "../../Assets/LandingPage/linkedin.png";
 import OldWoman from "../../Assets/LandingPage/oldWoman.png";
 import Ducash from "../../Assets/LandingPage/ducash.png";
+import { Button, Checkbox, Form } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
+
 //Feature ***************************************************************************
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
@@ -16,6 +19,7 @@ import Cards from "../../Components/LandingPage/Cards";
 //Tags Estilizadas ******************************************************************
 import {
     Centralize,
+    DucashContainer, DucashTextContainer,
     CremationContainer, CremationImageMobileContainer, CremationTextContainer, CremationTextCard, CremationImage,
     CarouselContainer,
     CardSessionContainer, CardContainer,
@@ -63,12 +67,43 @@ export default function LandingPage() {
                 <SectionServices />
             </BackgroundServices>
 
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "671px", width: "100%" }}>
-                <img src={OldWoman}></img>
-                <div>
+            <DucashContainer>
+                <img src={OldWoman} width="381px" height="504px"></img>
+                <DucashTextContainer>
+
                     <img src={Ducash}></img>
-                </div>
-            </div>
+
+                    <div>
+                        <b>Cliente Grupo Zelo tem benefícios em vida com o Clube de Descontos do Ducash</b> que dá
+                        descontos em farmácias, laboratórios, postos de gasolina, clínicas e vários outros
+                        parceiros. Para você aproveitar a vida com mais tranquilidade.
+                        <br /><br />
+
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                            <div><b>+1.500.000</b><br />Clientes<br />Atendidos</div>
+                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div><b>+2.100.000</b><br />Parceiros</div>
+                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div><b>+600</b><br />Cidades<br />Atendidas</div>
+                        </div>
+                    </div>
+                </DucashTextContainer>
+            </DucashContainer>
+
+            <Form>
+                <Form.Field>
+                    <label>First Name</label>
+                    <input placeholder='First Name' />
+                </Form.Field>
+                <Form.Field>
+                    <label>Last Name</label>
+                    <input placeholder='Last Name' />
+                </Form.Field>
+                <Form.Field>
+                    <Checkbox label='I agree to the Terms and Conditions' />
+                </Form.Field>
+                <Button type='submit'>Submit</Button>
+            </Form>
 
             {/***********************************************************
             *********************** CREMATION ***************************
@@ -98,7 +133,7 @@ export default function LandingPage() {
                 <CremationContainer>
                     <CremationTextContainer>
                         <CremationTextCard>
-                            <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
+                            <h2 style={{ color: "#0D1D86" }}>{cremationTitle01}<br />{cremationTitle02}</h2><br />
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
                         <br />

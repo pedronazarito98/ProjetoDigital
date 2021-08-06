@@ -8,6 +8,43 @@ export const Centralize = styled.div`
 `;
 
 /*************************************************************************************
+************************************ DUCASH ******************************************
+*************************************************************************************/
+export const DucashContainer = styled.div`  
+  display: flex; 
+  flex-wrap: wrap-reverse; 
+  align-items: center; 
+  justify-content: center; 
+  height: 505px; 
+  width: 100%; 
+  background-color: #edc243;
+
+  padding-left: 49px;
+  padding-right: 49px;
+
+  @media(max-width: 896px) {
+    height: 820px; 
+    align-items: stretch; 
+  }
+`;
+
+export const DucashTextContainer = styled.div`  
+  width: 25%;
+  text-align: justify;
+  color: #101c84;
+  margin-left: 50px;
+
+  @media(max-width: 1340px) {
+    width: 45%;
+  }
+
+  @media(max-width: 768px) {
+    width: 100%;
+    margin-left: 0px; 
+  }
+`;
+
+/*************************************************************************************
 ************************************ CREMAÇÃO ****************************************
 *************************************************************************************/
 export const CremationContainer = styled.div`  
