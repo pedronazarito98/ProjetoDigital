@@ -22,6 +22,7 @@ export const ContainerText = styled.div`
         font-weight: normal;
         margin-bottom: 10px;
     }
+    
     p {
         margin-bottom: 10px;
         line-height: 20px;

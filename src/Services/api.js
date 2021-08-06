@@ -19,7 +19,13 @@ export const employees = [
     { 
         "img": ellon ,
         "name": "Ellon Musk" ,
-        "description" : "Elon Reeve Musk, é um empreendedor e filantropo sul-africano-canadense-americano. Ele é o fundador, CEO e CTO da SpaceX; CEO da Tesla Motors; vice-presidente da OpenAI, fundador e CEO da Neuralink e co-fundador e presidente da SolarCity."
+        "description" : "Elon Reeve Musk, é um empreendedor e filantropo sul-africano-canadense-americano. Ele é o fundador, CEO e CTO da SpaceX; CEO da Tesla Motors; vice-presidente da OpenAI, fundador e CEO da Neuralink."
+    }
+    ,
+    { 
+        "img": ellon ,
+        "name": "Ellon Musk" ,
+        "description" : "Elon Reeve Musk, é um empreendedor e filantropo sul-africano-canadense-americano. Ele é o fundador, CEO e CTO da SpaceX; CEO da Tesla Motors; vice-presidente da OpenAI, fundador e CEO da Neuralink."
     }
 ];
 

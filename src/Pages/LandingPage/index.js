@@ -4,6 +4,12 @@ import Logo from "../../Assets/LandingPage/logo.png";
 import Facebook from "../../Assets/LandingPage/facebook.png";
 import Instagram from "../../Assets/LandingPage/instagram.png";
 import Youtube from "../../Assets/LandingPage/youtube.png";
+import Linkedin from "../../Assets/LandingPage/linkedin.png";
+import OldWoman from "../../Assets/LandingPage/oldWoman.png";
+import Ducash from "../../Assets/LandingPage/ducash.png";
+import { Button, Checkbox, Form } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
+
 //Feature ***************************************************************************
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
@@ -13,6 +19,7 @@ import Cards from "../../Components/LandingPage/Cards";
 //Tags Estilizadas ******************************************************************
 import {
     Centralize,
+    DucashContainer, DucashTextContainer,
     CremationContainer, CremationImageMobileContainer, CremationTextContainer, CremationTextCard, CremationImage,
     CarouselContainer,
     CardSessionContainer, CardContainer,
@@ -39,7 +46,13 @@ import { SectionServices } from "../../Components/LandingPage/SectionServices";
 import { Formulario } from "../../Components/LandingPage/Formulario";
 
 export default function LandingPage() {
-    const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' });
+
+    var settings = {
+        dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    };
 
     return (
         <>
@@ -68,6 +81,44 @@ export default function LandingPage() {
 
                 <Formulario/>
             </BackgroundForm>
+            <DucashContainer>
+                <img src={OldWoman} width="381px" height="504px"></img>
+                <DucashTextContainer>
+
+                    <img src={Ducash}></img>
+
+                    <div>
+                        <b>Cliente Grupo Zelo tem benefícios em vida com o Clube de Descontos do Ducash</b> que dá
+                        descontos em farmácias, laboratórios, postos de gasolina, clínicas e vários outros
+                        parceiros. Para você aproveitar a vida com mais tranquilidade.
+                        <br /><br />
+
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                            <div><b>+1.500.000</b><br />Clientes<br />Atendidos</div>
+                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div><b>+2.100.000</b><br />Parceiros</div>
+                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div><b>+600</b><br />Cidades<br />Atendidas</div>
+                        </div>
+                    </div>
+                </DucashTextContainer>
+            </DucashContainer>
+
+            <Form>
+                <Form.Field>
+                    <label>First Name</label>
+                    <input placeholder='First Name' />
+                </Form.Field>
+                <Form.Field>
+                    <label>Last Name</label>
+                    <input placeholder='Last Name' />
+                </Form.Field>
+                <Form.Field>
+                    <Checkbox label='I agree to the Terms and Conditions' />
+                </Form.Field>
+                <Button type='submit'>Submit</Button>
+            </Form>
+
             {/***********************************************************
             *********************** CREMATION ***************************
             ************************************************************/}
@@ -96,10 +147,10 @@ export default function LandingPage() {
                 <CremationContainer>
                     <CremationTextContainer>
                         <CremationTextCard>
-                            <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
+                            <h2 style={{ color: "#0D1D86" }}>{cremationTitle01}<br />{cremationTitle02}</h2><br />
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
-
+                        <br />
                         <Centralize style={{ marginTop: 10 }}>
                             <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
                         </Centralize>
@@ -146,10 +197,10 @@ export default function LandingPage() {
             ************************* FOOTER ****************************
             ************************************************************/}
             <FooterContainer>
-                <img src={Logo} alt="Logo do Grupo Zelo" />
+                <img src={Logo} alt="Logo do Grupo Zelo" style={{ marginTop: 20 }} />
                 <br />
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", marginLeft: 2, marginRight: 2 }}>
-                    <div style={{ fontSize: 15, color: "white" }}>POLÍTICA DE PRIVACIDADE</div><br/><br/>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", marginLeft: 2, marginRight: 2, marginBottom: 20 }}>
+                    <div style={{ fontSize: 15, color: "white", marginBottom: 20 }}>POLÍTICA DE PRIVACIDADE</div><br /><br />
                     <Centralize>
                         <a href="https://www.instagram.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 20 }}>
                             <img src={Instagram} alt="Instagram do Grupo Zelo" style={{ width: 40, height: 40 }} />
@@ -159,6 +210,9 @@ export default function LandingPage() {
                         </a>
                         <a href="https://www.facebook.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
                             <img src={Facebook} alt="Facebook do Grupo Zelo" style={{ width: 35, height: 35 }} />
+                        </a>
+                        <a href="https://www.linkedin.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
+                            <img src={Linkedin} alt="Linkedin do Grupo Zelo" style={{ width: 30, height: 30 }} />
                         </a>
                     </Centralize>
                 </div>
