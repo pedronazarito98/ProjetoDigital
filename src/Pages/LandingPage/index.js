@@ -1,4 +1,6 @@
 //Imagens ***************************************************************************
+import Lottie from 'react-lottie';
+import upIcon from '../../Assets/LandingPage/up.json';
 import Woman from "../../Assets/LandingPage/woman.png";
 import Logo from "../../Assets/LandingPage/logo.png";
 import Facebook from "../../Assets/LandingPage/facebook.png";
@@ -7,14 +9,19 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import Linkedin from "../../Assets/LandingPage/linkedin.png";
 import OldWoman from "../../Assets/LandingPage/oldWoman.png";
 import Ducash from "../../Assets/LandingPage/ducash.png";
-import Lottie from 'react-lottie';
-import upIcon from '../../Assets/LandingPage/up.json';
+import imgHome from '../../Assets/LandingPage/imagemHome.png';
 //Feature ***************************************************************************
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
 import Carousel from "../../Components/LandingPage/Carousel";
 import ButtonPSP from "../../Components/LandingPage/ButtonPSP";
 import Cards from "../../Components/LandingPage/Cards";
+
+import { Navbar } from "../../Components/LandingPage/NavBar";
+import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
+import { SectionServices } from "../../Components/LandingPage/SectionServices";
+import { Formulario } from "../../Components/LandingPage/Formulario";
+import { TextInfo } from "../../Components/LandingPage/TextInfo";
 //Tags Estilizadas ******************************************************************
 import {
     Centralize,
@@ -24,9 +31,9 @@ import {
     CardSessionContainer, CardContainer,
     FooterContainer,
     BackgroundForm,
-    WrapperTitle
+    WrapperTitle,
+    Background, BackgroundServices
 } from "./style";
-
 //Mocks *****************************************************************************
 import {
     cremationTitle01,
@@ -36,13 +43,6 @@ import {
     cremationText02
 } from "../../Mocks/LandingPage/mock.js";
 //***********************************************************************************
-import { Background, BackgroundServices } from "./style";
-
-import { TextInfo } from "../../Components/LandingPage/TextInfo";
-import imgHome from '../../Assets/LandingPage/imagemHome.png';
-import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
-import { SectionServices } from "../../Components/LandingPage/SectionServices";
-import { Formulario } from "../../Components/LandingPage/Formulario";
 
 const defaultUpIcon = {
     loop: true,
@@ -58,6 +58,8 @@ export default function LandingPage() {
 
     return (
         <>
+            <Navbar />
+
             <Background id="start">
                 <TextInfo />
 
