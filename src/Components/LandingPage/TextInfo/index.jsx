@@ -26,7 +26,7 @@ export function TextInfo() {
             <h2>
                 Quem vai amparar a sua família no momento mais dificil?
             </h2>
-            <Button title='saiba mais sobre cada plano'/>
+            <Button title='Descubra o plano ideal pra você'/>
         </ContainerText>
     )
 }

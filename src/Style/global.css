@@ -38,8 +38,13 @@ h1 {
     font: 1.5rem 'Poppins', sans-serif;
 }
 
+h2 {
+    color: var(--textColor);
+}
+
 button {
     cursor: pointer;
+    border: none;
 }
 
 a {

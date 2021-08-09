@@ -14,14 +14,14 @@ import imgHome from '../../Assets/LandingPage/imagemHome.png';
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
 import Carousel from "../../Components/LandingPage/Carousel";
-import ButtonPSP from "../../Components/LandingPage/ButtonPSP";
 import Cards from "../../Components/LandingPage/Cards";
-
-import { Navbar } from "../../Components/LandingPage/NavBar";
 import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
 import { SectionServices } from "../../Components/LandingPage/SectionServices";
 import { Formulario } from "../../Components/LandingPage/Formulario";
 import { TextInfo } from "../../Components/LandingPage/TextInfo";
+import { Button } from '../../Components/LandingPage/Button';
+import { NavBar } from '../../Components/LandingPage/NavBar';
+
 //Tags Estilizadas ******************************************************************
 import {
     Centralize,
@@ -58,8 +58,7 @@ export default function LandingPage() {
 
     return (
         <>
-            <Navbar />
-
+    <NavBar/>
             <Background id="start">
                 <TextInfo />
 
@@ -144,9 +143,9 @@ export default function LandingPage() {
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
                         <br />
-                        <Centralize style={{ marginTop: 10 }}>
-                            <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
-                        </Centralize>
+                        
+                        <Button title='Descubra o plano ideal pra você'/>
+                        
                     </CremationTextContainer>
 
                     <CremationImage src={Woman} />
@@ -161,7 +160,7 @@ export default function LandingPage() {
                 <Carousel />
 
                 <Centralize style={{ marginTop: 30, marginBottom: 50 }}>
-                    <ButtonPSP text="SAIBA MAIS SOBRE CADA PLANO" />
+                <Button title='Descubra o plano ideal pra você'/>
                 </Centralize>
             </CarouselContainer>
 
@@ -181,9 +180,7 @@ export default function LandingPage() {
                     <Cards />
                 </CardContainer>
 
-                <Centralize>
-                    <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
-                </Centralize>
+                    <Button title='Descubra o plano ideal pra você'/>
             </CardSessionContainer>
 
             {/***********************************************************
