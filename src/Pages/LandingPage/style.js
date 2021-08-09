@@ -117,6 +117,10 @@ export const CremationTextContainer = styled.div`
   height: 100%;
   width: 50%;
 
+  h2 {
+    color: var(--textColor);
+  }
+
   @media(max-width: 1150px) {
     text-align: center;
     height: 30%;
@@ -229,16 +233,18 @@ export const WrapperTitle = styled.div`
 
   span{
     color: var(--gold);
+    font-size:17px;
+    line-height:34px;
   }
 
   h1{
-    border-bottom: 2px solid var(--gold);
-    width: 22px;
+
+    font-size:54px;
 
     color: var(--gold);
     font-weight: normal;
     text-transform: uppercase;
-    line-height: 1.5rem;
+    line-height: 3.5rem;
   }
 ` 
 
@@ -279,7 +285,7 @@ export const BackgroundForm = styled.section`
 width: 100%;
 height: 100%;
 display: flex;
-padding: 10px;
+padding: 30px;
 flex-wrap: wrap;
 align-items: center;
 justify-content: center;

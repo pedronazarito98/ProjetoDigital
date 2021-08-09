@@ -32,4 +32,10 @@ export const Wrapper = styled.div`
         filter: brightness(0.9)
     }
     }
+
+    img{
+        height: 15px;
+        width: 15px;
+
+    }
 `

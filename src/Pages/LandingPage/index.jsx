@@ -7,14 +7,12 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import Linkedin from "../../Assets/LandingPage/linkedin.png";
 import OldWoman from "../../Assets/LandingPage/oldWoman.png";
 import Ducash from "../../Assets/LandingPage/ducash.png";
-import { Button, Checkbox, Form } from 'semantic-ui-react';
-// import 'semantic-ui-css/semantic.min.css';
+
 
 //Feature ***************************************************************************
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
 import Carousel from "../../Components/LandingPage/Carousel";
-import ButtonPSP from "../../Components/LandingPage/ButtonPSP";
 import Cards from "../../Components/LandingPage/Cards";
 //Tags Estilizadas ******************************************************************
 import {
@@ -44,15 +42,10 @@ import imgHome from '../../Assets/LandingPage/imagemHome.png';
 import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
 import { SectionServices } from "../../Components/LandingPage/SectionServices";
 import { Formulario } from "../../Components/LandingPage/Formulario";
+import { Button } from "../../Components/LandingPage/Button";
 
 export default function LandingPage() {
     const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' });
-
-    var settings = {
-        dots: true,
-        slidesToShow: 2,
-        slidesToScroll: 1
-    };
 
     return (
         <>
@@ -80,7 +73,10 @@ export default function LandingPage() {
                 </WrapperTitle>
 
                 <Formulario/>
+               
             </BackgroundForm>
+
+
             <DucashContainer>
                 <img src={OldWoman} width="381px" height="504px" alt='OldWoman' />
                 <DucashTextContainer>
@@ -132,13 +128,13 @@ export default function LandingPage() {
                 <CremationContainer>
                     <CremationTextContainer>
                         <CremationTextCard>
-                            <h2 style={{ color: "#0D1D86" }}>{cremationTitle01}<br />{cremationTitle02}</h2><br />
+                            <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
                         <br />
-                        <Centralize style={{ marginTop: 10 }}>
-                            <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
-                        </Centralize>
+                        
+                        <Button title='Descubra o plano ideal pra você'/>
+                        
                     </CremationTextContainer>
 
                     <CremationImage src={Woman} />
@@ -153,7 +149,7 @@ export default function LandingPage() {
                 <Carousel />
 
                 <Centralize style={{ marginTop: 30, marginBottom: 50 }}>
-                    <ButtonPSP text="SAIBA MAIS SOBRE CADA PLANO" />
+                <Button title='Descubra o plano ideal pra você'/>
                 </Centralize>
             </CarouselContainer>
 
@@ -173,9 +169,7 @@ export default function LandingPage() {
                     <Cards />
                 </CardContainer>
 
-                <Centralize>
-                    <ButtonPSP text="DESCUBRA O PLANO IDEAL PARA VOCÊ" />
-                </Centralize>
+                    <Button title='Descubra o plano ideal pra você'/>
             </CardSessionContainer>
 
             {/***********************************************************

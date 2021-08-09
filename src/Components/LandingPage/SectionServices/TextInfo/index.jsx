@@ -41,7 +41,7 @@ return(
                 Nossos profissionais são preparados para atender você e sua familia, com atenção a todos 
                 os detalhes e o carinho que todo mundo espera e precisa nessa hora tão difícil.
             </h2>
-            <Button title='saiba mais sobre cada plano'/>
+            <Button title='Descubra o plano ideal pra você'/>
         </ContainerText>
     )
 }
