@@ -5,7 +5,7 @@ export const ContainerText = styled.div`
     width: 100%;
     max-width: 500px;
 
-
+    text-align: justify;
     
     padding: 10px;
 

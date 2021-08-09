@@ -1,5 +1,5 @@
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { Wrapper } from "./style";
+import { ContainerImg, Wrapper } from "./style";
 
 import Arrow from "../../../Assets/LandingPage/arrow.png";
 
@@ -11,17 +11,9 @@ export function Button(props) {
             <button type='button' onClick={onClick}>
                 {title}
                 
-                <div style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    justifyContent: "center", 
-                    backgroundColor: "rgb(123 173 51 / 60%)", 
-                    width: 30,
-                     height: 30, 
-                     borderRadius: 50 }}>
-
-               <img src={Arrow} alt='logo' />
-                </div>
+                <ContainerImg>
+                    <img src={Arrow} alt='logo' />
+                </ContainerImg>
             </button>
         </Wrapper>
 

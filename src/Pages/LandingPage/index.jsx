@@ -1,4 +1,6 @@
 //Imagens ***************************************************************************
+import Lottie from 'react-lottie';
+import upIcon from '../../Assets/LandingPage/up.json';
 import Woman from "../../Assets/LandingPage/woman.png";
 import Logo from "../../Assets/LandingPage/logo.png";
 import Facebook from "../../Assets/LandingPage/facebook.png";
@@ -7,25 +9,28 @@ import Youtube from "../../Assets/LandingPage/youtube.png";
 import Linkedin from "../../Assets/LandingPage/linkedin.png";
 import OldWoman from "../../Assets/LandingPage/oldWoman.png";
 import Ducash from "../../Assets/LandingPage/ducash.png";
-
-
+import imgHome from '../../Assets/LandingPage/imagemHome.png';
 //Feature ***************************************************************************
 import { useMediaQuery } from 'react-responsive'
 //Componentes ***********************************************************************
 import Carousel from "../../Components/LandingPage/Carousel";
 import Cards from "../../Components/LandingPage/Cards";
+import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
+import { SectionServices } from "../../Components/LandingPage/SectionServices";
+import { Formulario } from "../../Components/LandingPage/Formulario";
+import { TextInfo } from "../../Components/LandingPage/TextInfo";
 //Tags Estilizadas ******************************************************************
 import {
     Centralize,
-    DucashContainer, DucashTextContainer,
+    DucashContainer, DucashTextContainer, DucashIMG,
     CremationContainer, CremationImageMobileContainer, CremationTextContainer, CremationTextCard, CremationImage,
     CarouselContainer,
     CardSessionContainer, CardContainer,
     FooterContainer,
     BackgroundForm,
-    WrapperTitle
+    WrapperTitle,
+    Background, BackgroundServices
 } from "./style";
-
 //Mocks *****************************************************************************
 import {
     cremationTitle01,
@@ -34,26 +39,29 @@ import {
     cremationText01,
     cremationText02
 } from "../../Mocks/LandingPage/mock.js";
+import { Button } from '../../Components/LandingPage/Button';
 //***********************************************************************************
-import { Background, BackgroundServices } from "./style";
 
-import { TextInfo } from "../../Components/LandingPage/TextInfo";
-import imgHome from '../../Assets/LandingPage/imagemHome.png';
-import { VideoPlayer } from "../../Components/LandingPage/VideoPlayer";
-import { SectionServices } from "../../Components/LandingPage/SectionServices";
-import { Formulario } from "../../Components/LandingPage/Formulario";
-import { Button } from "../../Components/LandingPage/Button";
+const defaultUpIcon = {
+    loop: true,
+    autoplay: true,
+    animationData: upIcon,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
 
 export default function LandingPage() {
     const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' });
 
     return (
         <>
-            <Background>
+
+            <Background id="start">
                 <TextInfo />
-                
-                    <img src={imgHome} alt='' />
-                
+
+                <img src={imgHome} alt='' />
+
             </Background>
 
             <Background>
@@ -67,21 +75,22 @@ export default function LandingPage() {
             <BackgroundForm>
                 <WrapperTitle>
                     <span>Você está a um passo de conhecer o seu</span>
-                    <h1>Plano <br/>
-                        <strong> ideal</strong> 
+                    <h1>Plano <br />
+                        <strong> ideal</strong>
                     </h1>
                 </WrapperTitle>
 
-                <Formulario/>
-               
+                <Formulario />
             </BackgroundForm>
 
-
+            {/***********************************************************
+            ************************* DUCASH ****************************
+            ************************************************************/}
             <DucashContainer>
-                <img src={OldWoman} width="381px" height="504px" alt='OldWoman' />
-                <DucashTextContainer>
+                <DucashIMG src={OldWoman} alt='OldWoman' />
 
-                    <img src={Ducash} alt='Ducash'/>
+                <DucashTextContainer>
+                    <img src={Ducash} alt='Ducash' />
 
                     <div>
                         <b>Cliente Grupo Zelo tem benefícios em vida com o Clube de Descontos do Ducash</b> que dá
@@ -91,9 +100,9 @@ export default function LandingPage() {
 
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                             <div><b>+1.500.000</b><br />Clientes<br />Atendidos</div>
-                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div style={{ height: "60px", borderRight: "2px solid #ca8211" }} />
                             <div><b>+2.100.000</b><br />Parceiros</div>
-                            <div style={{ height: "80px", borderRight: "2px solid #ca8211" }} />
+                            <div style={{ height: "60px", borderRight: "2px solid #ca8211" }} />
                             <div><b>+600</b><br />Cidades<br />Atendidas</div>
                         </div>
                     </div>
@@ -128,7 +137,7 @@ export default function LandingPage() {
                 <CremationContainer>
                     <CremationTextContainer>
                         <CremationTextCard>
-                            <h2>{cremationTitle01}<br />{cremationTitle02}</h2><br />
+                            <h2 style={{ color: "var(--textColor)" }}>{cremationTitle01}<br />{cremationTitle02}</h2><br />
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
                         <br />
@@ -179,7 +188,7 @@ export default function LandingPage() {
                 <img src={Logo} alt="Logo do Grupo Zelo" style={{ marginTop: 20 }} />
                 <br />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", marginLeft: 2, marginRight: 2, marginBottom: 20 }}>
-                    <div style={{ fontSize: 15, color: "white", marginBottom: 20 }}>POLÍTICA DE PRIVACIDADE</div><br /><br />
+                    <div style={{ fontSize: 15, color: "white", marginBottom: 0 }}>POLÍTICA DE PRIVACIDADE</div><br /><br />
                     <Centralize>
                         <a href="https://www.instagram.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 20 }}>
                             <img src={Instagram} alt="Instagram do Grupo Zelo" style={{ width: 40, height: 40 }} />
@@ -192,6 +201,15 @@ export default function LandingPage() {
                         </a>
                         <a href="https://www.linkedin.com" style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: 50, height: 50, borderRadius: 100, marginLeft: 10 }}>
                             <img src={Linkedin} alt="Linkedin do Grupo Zelo" style={{ width: 30, height: 30 }} />
+                        </a>
+                        <a href="#start">
+                            <Lottie
+                                options={defaultUpIcon}
+                                height={80}
+                                width={80}
+                                style={{ marginLeft: 10 }}
+                                isClickToPauseDisabled
+                            />
                         </a>
                     </Centralize>
                 </div>

@@ -33,9 +33,20 @@ export const Wrapper = styled.div`
     }
     }
 
-    img{
-        height: 15px;
-        width: 15px;
+    
+`
 
+export const ContainerImg = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(123 173 51 / 60%);
+    width:30px;
+    height:30px;
+    border-radius: 50px;
+
+    img {
+        height:15px;
+        width:15px;
     }
 `
