@@ -1,25 +1,16 @@
-import LandingPage from "./Pages/LandingPage";
-import Payment from "./Pages/EcommercePage/Payment";
+import React from "react";
 import './Style/global.css';
 
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import Routes from "./routes";
+import { BrowserRouter } from "react-router-dom";
 
-export default function Routes() {
+function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <LandingPage />
-        </Route>
-        <Route path="/ecommercePayment">
-          <Payment />
-        </Route>
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+
   );
-}
+};
+
+export default App;

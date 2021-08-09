@@ -53,7 +53,7 @@ const defaultUpIcon = {
     }
 };
 
-export default function LandingPage() {
+export function LandingPage() {
     const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1150px)' });
 
     return (
