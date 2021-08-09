@@ -1,5 +1,7 @@
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { Wrapper } from "./style";
+import { ContainerImg, Wrapper } from "./style";
+
+import Arrow from "../../../Assets/LandingPage/arrow.png";
 
 export function Button(props) {
     const { title, onClick } = props;
@@ -8,7 +10,10 @@ export function Button(props) {
         <Wrapper>
             <button type='button' onClick={onClick}>
                 {title}
-                <IoIosArrowDroprightCircle style={{ color: 'var(--white)', width: 'auto', height: '20px' }} />
+                
+                <ContainerImg>
+                    <img src={Arrow} alt='logo' />
+                </ContainerImg>
             </button>
         </Wrapper>
 

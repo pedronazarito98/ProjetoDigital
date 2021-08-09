@@ -32,4 +32,22 @@ export const Wrapper = styled.div`
         filter: brightness(0.9)
     }
     }
+   
+
+    
+`
+
+export const ContainerImg = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(123 173 51 / 60%);
+    width:30px;
+    height:30px;
+    border-radius: 50px;
+
+    img {
+        height:15px !important; 
+        width:15px ;
+    }
 `
