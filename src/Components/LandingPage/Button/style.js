@@ -32,6 +32,7 @@ export const Wrapper = styled.div`
         filter: brightness(0.9)
     }
     }
+   
 
     
 `
@@ -46,7 +47,7 @@ export const ContainerImg = styled.div`
     border-radius: 50px;
 
     img {
-        height:15px;
-        width:15px;
+        height:15px !important; 
+        width:15px ;
     }
 `
