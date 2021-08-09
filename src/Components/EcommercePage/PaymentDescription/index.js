@@ -1,4 +1,4 @@
-import { Container, Title, Banner, Content, Rectangle } from "./style";
+import { Title, Banner, Content, Rectangle } from "./style";
 import banner from "../../../Assets/EcommercePage/banner.png";
 
 export default function PaymentDescriptionComponent(props) {
@@ -15,7 +15,7 @@ export default function PaymentDescriptionComponent(props) {
     ];
 
     return (
-        <Container>
+        <>
             <Title>Zelo Individual</Title>
             <Banner src={banner} alt="Banner do Zelo Individual" />
 
@@ -25,7 +25,6 @@ export default function PaymentDescriptionComponent(props) {
             <Rectangle>{rectangle[0]}</Rectangle>
             <Rectangle>{rectangle[1]}</Rectangle>
             <Rectangle>{rectangle[2]}</Rectangle>
-
-        </Container>
+        </>
     )
 }
