@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import useForm, { validateInfo } from '../../../Hooks/LandingPage/useForm/index.js';
 import { Button } from '../Button/index.js';
 
-import { WrapperForm } from './styles.js';
+import { FieldContainer, WrapperForm } from './styles.js';
 
 
 export function Formulario() {
@@ -19,7 +19,7 @@ export function Formulario() {
       <>
       <WrapperForm>
 
-         <div style={{ display: 'flex' }}>
+         <FieldContainer>
             <input
                type="Nome"
                name='Nome'
@@ -34,9 +34,9 @@ export function Formulario() {
                value={values.Email}
                onChange={handleChange}
             />
-         </div>
+         </FieldContainer>
 
-         <div style={{ display: 'flex' }}>
+         <div style={{display:'flex'}}>
 
             <select placeholder="Gênero">
                <option value=''>Gênero</option>
@@ -61,7 +61,7 @@ export function Formulario() {
             </select>
          </div>
 
-         <div style={{ display: 'flex'}}>
+         <FieldContainer>
             <select placeholder="Cidade">
                <option value=''>Cidade</option>
                <option value='Masculino'>Masculino</option>
@@ -75,10 +75,10 @@ export function Formulario() {
                <option value='Feminino'>Feminino</option>
                <option value='Outros'>Outros</option>
             </select>
-         </div>
+         </FieldContainer>
 
 
-         <div style={{ display: 'flex' }}>
+         <FieldContainer>
 
             <select placeholder="Tem filhos?">
                <option value=''>Tem filhos?</option>
@@ -93,7 +93,7 @@ export function Formulario() {
                <option value='Feminino'>Feminino</option>
                <option value='Outros'>Outros</option>
             </select>
-         </div>
+         </FieldContainer>
 
          {/* <button type="submit">
             cadastrar

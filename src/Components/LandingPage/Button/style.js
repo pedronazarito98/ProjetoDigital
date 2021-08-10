@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
         color: var(--white);
         font-weight: bold;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 0.8rem;
 
         display: flex;
         align-items: center;

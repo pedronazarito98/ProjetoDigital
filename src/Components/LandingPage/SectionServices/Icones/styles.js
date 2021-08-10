@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     position: relative;
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: 150px;
     background: var(--blue);
     border-radius: 50%;
@@ -25,6 +26,11 @@ export const Wrapper = styled.div`
         text-align: center;
         margin-top: 15px;
     }
+
+    @media (max-width: 375px) {
+        max-width: 110px;
+        height: 110px;
+    }
 `;
 
 export const Icon = styled.div`
@@ -42,5 +48,14 @@ export const Icon = styled.div`
         height:30px;
         width:30px;
         color: var(--black);
+    }
+
+    @media (max-width: 375px) {
+        max-width: 55px;
+        height: 55px;
+
+        transform: translate(0px, -55px);
+
+
     }
 `;

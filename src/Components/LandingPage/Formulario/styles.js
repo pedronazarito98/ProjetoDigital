@@ -50,6 +50,9 @@ export const WrapperForm = styled.form`
 `;
 
 export const FieldContainer = styled.div`
-    display: flex,
-    background-color:red;
+    display: flex;
+    
+    @media (max-width: 375px) {
+        flex-direction: column;
+    }
 `
