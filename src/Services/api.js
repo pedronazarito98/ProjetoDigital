@@ -35,7 +35,7 @@ export const plans = [
         "title": "Seguradora" ,
         "text" : "O auxílio funerário, nesse caso, é propocional ao valor do sinistro de seu seguro de vida, e nem sempre o benefício é extensivo aos seus dependentes."
     },
-    { 
+    {
         "img" : man,
         "title": "Particular" ,
         "text" : "Você deve conhecer antes a empresa com que vai contar, já que, no momento, você e sua família podem estar fragilizados para fazerem escolhas que podem sair muito caras."

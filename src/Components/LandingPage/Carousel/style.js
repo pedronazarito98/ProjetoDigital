@@ -17,12 +17,12 @@ export const Card = styled.div`
 
   @media(min-width: 1150px) {
     height:${props => props.increase ? 400 : 390}px;
-    width: ${props => props.increase ? 100 : 90}%;
+    width: ${props => props.increase ? 100 : 70}%;
   }
 
   &:hover{
     height: 400px;
-    width: 100%;
+    width: 70%;
   }
 `;
 

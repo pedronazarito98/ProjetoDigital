@@ -4,7 +4,7 @@ import { ContainerImg, Header, SectionCard, SectionViewVideo, TitleSectionCards 
 import imgHome from '../../../Assets/EcommercePage/imgHome.png';
 import { Card } from "../../../Components/EcommercePage/Card";
 import { DadosCard } from "../../../Mocks/EcommercePage/DataCards";
-import { InfoVideo } from "../../../Views/EcommercePage/InfoVideo";
+import { InfoVideo } from "../Views/Home/InfoVideo";
 
 
 

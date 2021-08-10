@@ -1,8 +1,8 @@
 // Components ****************************************************
 import { Navbar } from "../../../Components/EcommercePage/Navbar";
 // Sections ******************************************************
-import CenterSection from "../../../Views/EcommercePage/Payment/CenterSection";
-import RightSection from "../../../Views/EcommercePage/Payment/RightSection";
+import CenterSection from "../Views/Payment/CenterSection";
+import RightSection from "../Views/Payment/RightSection";
 // Styles ********************************************************
 import { Container } from "./style";
 //****************************************************************

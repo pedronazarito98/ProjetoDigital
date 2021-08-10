@@ -11,19 +11,28 @@ export default function PaymentFormComponent(props) {
             <Content>
                 Cremação
                 <Line />
-
                 <ChakraProvider>
                     <RadioGroup onChange={setValue} value={value}>
-                        <Stack direction="row">
-                            <Radio value="1">First</Radio>
-                            <Radio value="2">Second</Radio>
-                            <Radio value="3">Third</Radio>
+                        <Stack direction="row" spacing="50%">
+                            <Radio value="1">Sem Cremação</Radio>
+                            <Radio value="2">Com Cremação</Radio>
                         </Stack>
                     </RadioGroup>
                 </ChakraProvider>
-                
+                <br />
+
                 Idade do Titular
                 <Line />
+                <ChakraProvider>
+                    <RadioGroup onChange={setValue} value={value}>
+                        <Stack direction="row" spacing="46.5%">
+                            <Radio value="1">64 anos ou menos</Radio>
+                            <Radio value="2">65 anos ou mais</Radio>
+                        </Stack>
+                    </RadioGroup>
+                </ChakraProvider>
+                <br />
+
                 Cadastrar Dependentes
                 <Line />
             </Content>
