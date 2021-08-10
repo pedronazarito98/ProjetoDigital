@@ -5,8 +5,6 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
 
-  height:390px;
-  width: 100%;
   border-radius: 10px;
   background-color: #f2f2fc;
   padding: 10px;
@@ -19,7 +17,7 @@ export const Card = styled.div`
 
   @media(min-width: 1150px) {
     height:${props => props.increase ? 400 : 390}px;
-    width: ${props => props.increase ? 100 : 70}%;
+    width: ${props => props.increase ? 100 : 90}%;
   }
 
   &:hover{

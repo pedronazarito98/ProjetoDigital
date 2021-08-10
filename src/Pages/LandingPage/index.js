@@ -58,7 +58,7 @@ export function LandingPage() {
 
     return (
         <>
-    <NavBar/>
+            <NavBar />
             <Background id="start">
                 <TextInfo />
 
@@ -143,9 +143,9 @@ export function LandingPage() {
                             <div><b>{cremationBoldText}</b>{cremationText01}<br /><br /> {cremationText02}</div>
                         </CremationTextCard>
                         <br />
-                        
-                        <Button title='Descubra o plano ideal pra você'/>
-                        
+
+                        <Button title='Descubra o plano ideal pra você' />
+
                     </CremationTextContainer>
 
                     <CremationImage src={Woman} />
@@ -160,7 +160,7 @@ export function LandingPage() {
                 <Carousel />
 
                 <Centralize style={{ marginTop: 30, marginBottom: 50 }}>
-                <Button title='Descubra o plano ideal pra você'/>
+                    <Button title='Descubra o plano ideal pra você' />
                 </Centralize>
             </CarouselContainer>
 
@@ -180,7 +180,7 @@ export function LandingPage() {
                     <Cards />
                 </CardContainer>
 
-                    <Button title='Descubra o plano ideal pra você'/>
+                <Button title='Descubra o plano ideal pra você' />
             </CardSessionContainer>
 
             {/***********************************************************

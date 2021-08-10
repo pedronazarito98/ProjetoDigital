@@ -32,7 +32,7 @@ export default function EmployeesSection() {
             if (currentCard === 3 && index === 2) { justify = "flex-start"; increase = false; }
 
             componentArray.push(
-                <div style={{ display: "flex", alignItems: "center", justifyContent: justify, width: "95%", height: "400px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: justify, width: "95%", height: "400px"}}>
                     <Card increase={increase}>
                         <Image src={employee.img} alt="Texto Alternativo" />
                         <h3 style={{ color: "#45536b" }}>{employee.name}</h3>
