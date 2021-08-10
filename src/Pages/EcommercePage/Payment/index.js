@@ -1,5 +1,5 @@
 // Components ****************************************************
-import Navbar from "../../../Components/EcommercePage/Navbar";
+import { Navbar } from "../../../Components/EcommercePage/Navbar";
 // Sections ******************************************************
 import CenterSection from "./Sections/CenterSection";
 import RightSection from "./Sections/RightSection";

@@ -27,7 +27,7 @@
 }
 
 body {
-    background: var(--white);
+    background: rgb(219 220 243 / 50%);
 }
 
 body, input, textarea, select, button, div {
