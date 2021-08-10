@@ -187,7 +187,7 @@ export const CardSessionContainer = styled.div`
   flex-Direction: column;
   align-items: center;
   justify-content: center;
-
+  background-color: white;
   color:#45536b;
 
   margin-top: 20px;
