@@ -164,7 +164,7 @@ export const CremationImage = styled.img`
 export const CarouselContainer = styled.div`  
   display: flex;
   flex-direction: column;
-  background-color: #f2f2fc;
+  background-color: #cbcbff;
 
   padding-top: 50px;
   padding-left: 100px;
@@ -187,7 +187,6 @@ export const CardSessionContainer = styled.div`
   flex-Direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
   color:#45536b;
 
   margin-top: 20px;
@@ -202,7 +201,7 @@ export const CardContainer = styled.div`
   justify-content: center;
 	flex-wrap: wrap;
 
-  background-color: white;
+  // background-color: white;
 
   width: 100%;
   margin-top: 50px;

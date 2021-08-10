@@ -6,7 +6,7 @@ export const Card = styled.div`
   align-items: center;
 
   border-radius: 10px;
-  background-color: #f2f2fc;
+  background-color: #fff;
   padding: 10px;
 
   border-style:solid;

@@ -7,31 +7,39 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
     button{
         width: 100%;
         max-width:400px;
-    height: 40px;
-    background-color: var(--green);
-    padding: 10px;
-    border: none;
-    border-radius: 50px;
+        height: 40px;
+        padding: 10px;
 
-    color: var(--white);
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1rem;
+        background-color: var(--green);
+        border: none;
+        border-radius: 50px;
+        
+        color: var(--white);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+        transition: filter 0.2s;
 
-    transition: filter 0.2s;
+        &:hover {
+            filter: brightness(0.9)
+        }
 
-    &:hover {
-        filter: brightness(0.9)
+        @media (max-width: 320px) {
+            font-size: 0.8rem;
+            width: 300px;
+        }
+
     }
-    }
+
    
 
     
