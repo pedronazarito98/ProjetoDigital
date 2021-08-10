@@ -159,9 +159,10 @@ export function LandingPage() {
             <CarouselContainer>
                 <Carousel />
 
-                <Centralize style={{ marginTop: 30, marginBottom: 50 }}>
+                <Centralize style={{ marginRight: 15, marginTop: 20 }}>
                     <Button title='Descubra o plano ideal pra você' />
                 </Centralize>
+                <br/><br/>
             </CarouselContainer>
 
             {/***********************************************************

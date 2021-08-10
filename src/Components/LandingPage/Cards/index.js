@@ -1,4 +1,4 @@
-import { Card, Image, Text } from "./style";
+import { Card, Image, Title, Text } from "./style";
 import { plans } from "../../../Services/api";
 import title from "../../../Assets/LandingPage/title.png";
 
@@ -13,7 +13,7 @@ export default function Cards() {
                     <Image src={title} alt={plan.title} />
                     <Image src={plan.img} alt={plan.title} style={{ marginLeft: -239, marginBottom: 23}}/>
 
-                    <h3 style={{ marginTop: -58, marginLeft: 35, color: "#101c85" }}>{plan.title}</h3>
+                    <Title>{plan.title}</Title>
 
                     <Text>
                         {plan.text}

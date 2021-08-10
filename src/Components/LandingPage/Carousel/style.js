@@ -6,12 +6,12 @@ export const Card = styled.div`
   align-items: center;
 
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #e1e3f5;
   padding: 10px;
 
   border-style:solid;
   border-width: 1px;
-  border-color: #e3e3ff;
+  border-color: #ccd1ff;
 
   transition: 0.25s;
 

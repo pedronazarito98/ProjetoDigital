@@ -164,7 +164,7 @@ export const CremationImage = styled.img`
 export const CarouselContainer = styled.div`  
   display: flex;
   flex-direction: column;
-  background-color: #cbcbff;
+  background-color: #e1e3f5;
 
   padding-top: 50px;
   padding-left: 100px;
@@ -174,7 +174,7 @@ export const CarouselContainer = styled.div`
   border-bottom-right-radius: 15%;
 
   @media(max-width: 1024px) {
-    padding-left: 0px;
+    padding-left: 16px;
     padding-right: 0px;
   }
 `;
@@ -187,6 +187,7 @@ export const CardSessionContainer = styled.div`
   flex-Direction: column;
   align-items: center;
   justify-content: center;
+
   color:#45536b;
 
   margin-top: 20px;
@@ -200,8 +201,6 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: center;
 	flex-wrap: wrap;
-
-  // background-color: white;
 
   width: 100%;
   margin-top: 50px;

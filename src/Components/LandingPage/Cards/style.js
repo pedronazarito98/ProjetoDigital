@@ -14,6 +14,16 @@ export const Image = styled.img`
   margin-left: -30px; 
 `;
 
+export const Title = styled.h3`
+  margin-top: -18.5%;
+  margin-left: 35px;
+  color: #101c85;
+
+  @media(max-width: 360px) {
+    margin-top: -21%;
+  }
+`;
+
 export const Text = styled.div`
   width: 100%;
   text-align: justify;

@@ -8,14 +8,12 @@ import { WrapperForm } from './styles.js';
 export function Formulario() {
    const { handleChange, handleSubmit, values, errors } = useForm(validateInfo);
 
-
    useEffect(() => {
       const script = document.createElement("script");
       script.src = "https://d335luupugsy2.cloudfront.net/js/loader-scripts/21d8841a-20c5-4aa8-bba0-b43bd35c3461-loader.js";
       script.async = true
       document.body.appendChild(script);
    }, []);
-
 
    return (
       <>

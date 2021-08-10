@@ -4,8 +4,6 @@ export const WrapperForm = styled.form`
     width: 100%;
     max-width:700px;
 
-    
-
     input {
     
     width: 100%;
