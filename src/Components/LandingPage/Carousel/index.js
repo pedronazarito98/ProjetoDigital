@@ -2,8 +2,7 @@ import { useState } from "react";
 import Carousel from "react-multi-carousel";
 import { Image, Card } from "./style";
 import "react-multi-carousel/lib/styles.css";
-import { employees } from "../../../Services/api";
-import { responsive } from "../../../Mocks/LandingPage/mock";
+import { responsive, employees } from "../../../Mocks/LandingPage/mock";
 
 export default function EmployeesSection() {
     const [currentCard, setCurrentCard] = useState(employees.length - 1);
@@ -32,7 +31,7 @@ export default function EmployeesSection() {
             if (currentCard === 3 && index === 2) { justify = "flex-start"; increase = false; }
 
             componentArray.push(
-                <div style={{ display: "flex", alignItems: "center", justifyContent: justify, width: "95%", height: "400px"}}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: justify, width: "95%", height: "400px" }}>
                     <Card increase={increase}>
                         <Image src={employee.img} alt="Texto Alternativo" />
                         <h3 style={{ color: "#45536b" }}>{employee.name}</h3>

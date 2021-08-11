@@ -9,7 +9,10 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "babel-runtime": "^6.26.0",
+    "copy-files-from-to": "^3.2.0",
+    "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
     "framer-motion": "^4",
     "react": "^17.0.2",
@@ -27,6 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:prd": "env-cmd -f ./.env.production npm run build && copy-files-from-to --mode prd",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -47,5 +51,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "copyFiles": [
+    {
+      "from": {
+        "default": "src/extra/dev/*",
+        "hom": "src/extra/hom/*",
+        "prd": "src/extra/prd/*",
+        "hom-zelo": "src/extra/hom-zelo/*"
+      },
+      "to": "build/"
+    }
+  ]
 }

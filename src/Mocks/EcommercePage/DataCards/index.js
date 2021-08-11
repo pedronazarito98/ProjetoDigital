@@ -5,9 +5,7 @@ import imgTap from '../../../Assets/EcommercePage/icon/tap.svg';
 import imgOrientation from '../../../Assets/EcommercePage/icon/orientation.svg';
 import imgExpertise from '../../../Assets/EcommercePage/icon/expertise.svg';
 import imgCuidado from '../../../Assets/EcommercePage/icon/cuidado.svg';
-
 import imgPigg from '../../../Assets/EcommercePage/icon/piggy-bank.svg';
-
 
 export const DadosCard = [
     {

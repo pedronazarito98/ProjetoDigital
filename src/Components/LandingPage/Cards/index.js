@@ -1,5 +1,5 @@
 import { Card, Image, Title, Text } from "./style";
-import { plans } from "../../../Services/api";
+import { plans } from "../../../Mocks/LandingPage/mock";
 import title from "../../../Assets/LandingPage/title.png";
 
 export default function Cards() {

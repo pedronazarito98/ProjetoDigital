@@ -1,12 +1,19 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import useForm, { validateInfo } from '../../../Hooks/LandingPage/useForm/index.js';
 import { Button } from '../Button/index.js';
 
 import { FieldContainer, WrapperForm } from './styles.js';
 
+import { states } from "../../../Mocks/LandingPage/brasilStates.js";
+import sendRequest from '../../../Services/sendRequest';
 
 export function Formulario() {
    const { handleChange, handleSubmit, values, errors } = useForm(validateInfo);
+   const [zipcode, setZipcode] = useState("");
+   const [state, setState] = useState("");
+   const [city, setCity] = useState("");
+   
+   const [cities, setCities] = useState([<option value=''>Cidade</option>]);
 
    useEffect(() => {
       const script = document.createElement("script");
@@ -15,98 +22,158 @@ export function Formulario() {
       document.body.appendChild(script);
    }, []);
 
+   useEffect(() => {
+      if (zipcode.length === 8) {
+         getAddress();
+      } else if (zipcode.length > 8) {
+         alert("O CEP não pode ter mais que 8 dígitos.");
+      }
+   }, [zipcode]);
+
+   useEffect(() => {
+      if (state.length !== "") {
+         generateCities();
+      }
+   }, [state]);
+
+   async function getAddress() {
+      try {
+         const res = await sendRequest.getAddress({ "zipcode": zipcode });
+
+         if (res && res.address && res.address.state && res.address.state.text) {
+            setState(res.address.state.text);
+            setCity(res.address.city.text);
+         } else {
+            console.log("Não achamos o CEP.");
+         }
+      } catch (error) {
+         console.log(`Error: ${error}`)
+      }
+   }
+
+   function generateStateComponent() {
+      let array = [];
+
+      states.forEach(element => {
+         array.push(<option value={element.nome}>{element.sigla} - {element.nome}</option>);
+      });
+
+      return array;
+   }
+
+   async function generateCities() {
+      try {
+         const res = await sendRequest.getAddress({ "state": state });
+
+         if (res && res.cities && res.cities.length > 0) {
+            setCities([<option value=''>Cidade</option>]);
+
+            res.cities.forEach(city => {
+               cities.push(<option value={city.text}>{city.text}</option>);
+            });
+
+            setCities(cities);
+         } else {
+            console.log("Não achamos cidades para este estado");
+         }
+      } catch (error) {
+         console.log(`Error: ${error}`)
+      }
+   }
+
    return (
       <>
-      <WrapperForm>
+         <WrapperForm>
+            <FieldContainer>
+               <input
+                  type="text"
+                  name='Nome'
+                  placeholder="Nome"
+                  value={values.Nome}
+                  onChange={handleChange}
+               />
+               <input
+                  type="text"
+                  name='Email'
+                  placeholder="Email"
+                  value={values.Email}
+                  onChange={handleChange}
+               />
+            </FieldContainer>
 
-         <FieldContainer>
-            <input
-               type="Nome"
-               name='Nome'
-               placeholder="Nome"
-               value={values.Nome}
-               onChange={handleChange}
-            />
-            <input
-               type="email"
-               name='Email'
-               placeholder="Email"
-               value={values.Email}
-               onChange={handleChange}
-            />
-         </FieldContainer>
+            <div style={{ display: 'flex' }}>
 
-         <div style={{display:'flex'}}>
+               <select placeholder="Gênero">
+                  <option value=''>Gênero</option>
+                  <option value='Masculino'>Masculino</option>
+                  <option value='Feminino'>Feminino</option>
+                  <option value='Outros'>Outros</option>
+               </select>
 
-            <select placeholder="Gênero">
-               <option value=''>Gênero</option>
-               <option value='Masculino'>Masculino</option>
-               <option value='Feminino'>Feminino</option>
-               <option value='Outros'>Outros</option>
-            </select>
+               <input
+                  type="text"
+                  placeholder="CEP"
+                  onChange={value => setZipcode(value.target.value)}
+                  value={zipcode}
+               />
 
-            <input
-               type="Cep"
-               name='Cep'
-               placeholder="Cep"
-               value={values.Cep}
-               onChange={handleChange}
-            />
+               <select
+                  placeholder="Estado"
+                  onChange={value => setState(value.target.value)}
+                  value={state}
+               >
+                  <option value=''>Estado</option>
+                  {generateStateComponent()}
+               </select>
+            </div>
 
-            <select placeholder="Estado">
-               <option value=''>Estado</option>
-               <option value='Masculino'>Masculino</option>
-               <option value='Feminino'>Feminino</option>
-               <option value='Outros'>Outros</option>
-            </select>
-         </div>
+            <FieldContainer>
+               <select
+                  placeholder="Cidade"
+                  onChange={value => setCity(value.target.value)}
+                  value={city}
+               >
+                  {cities}
+               </select>
 
-         <FieldContainer>
-            <select placeholder="Cidade">
-               <option value=''>Cidade</option>
-               <option value='Masculino'>Masculino</option>
-               <option value='Feminino'>Feminino</option>
-               <option value='Outros'>Outros</option>
-            </select>
-
-            <select placeholder="Estado Civil">
-               <option value=''>Estado Civil</option>
-               <option value='Masculino'>Masculino</option>
-               <option value='Feminino'>Feminino</option>
-               <option value='Outros'>Outros</option>
-            </select>
-         </FieldContainer>
+               <select placeholder="Estado Civil">
+                  <option value=''>Estado Civil</option>
+                  <option value='Masculino'>Masculino</option>
+                  <option value='Feminino'>Feminino</option>
+                  <option value='Outros'>Outros</option>
+               </select>
+            </FieldContainer>
 
 
-         <FieldContainer>
+            <FieldContainer>
 
-            <select placeholder="Tem filhos?">
-               <option value=''>Tem filhos?</option>
-               <option value='Masculino'>Masculino</option>
-               <option value='Feminino'>Feminino</option>
-               <option value='Outros'>Outros</option>
-            </select>
+               <select placeholder="Tem filhos?">
+                  <option value=''>Tem filhos?</option>
+                  <option value='Masculino'>Masculino</option>
+                  <option value='Feminino'>Feminino</option>
+                  <option value='Outros'>Outros</option>
+               </select>
 
-            <select placeholder="Possui pai/mãe/sogro/ sogra vivos?">
-               <option value=''>Possui pai/mãe/sogro/ sogra vivos?</option>
-               <option value='Masculino'>Masculino</option>
-               <option value='Feminino'>Feminino</option>
-               <option value='Outros'>Outros</option>
-            </select>
-         </FieldContainer>
+               <select placeholder="Possui pai/mãe/sogro/ sogra vivos?">
+                  <option value=''>Possui pai/mãe/sogro/ sogra vivos?</option>
+                  <option value='Masculino'>Masculino</option>
+                  <option value='Feminino'>Feminino</option>
+                  <option value='Outros'>Outros</option>
+               </select>
+            </FieldContainer>
 
-         {/* <button type="submit">
+            {/* <button type="submit">
             cadastrar
 
          </button> */}
-         <div style={{marginTop:20}}>
-            <Button title="Descubra o plano ideal pra você"/>
-         </div>
+            <div style={{ marginTop: 20 }}>
+               <Button title="Descubra o plano ideal pra você" />
+            </div>
 
 
-      </WrapperForm>
-   
-    
+         </WrapperForm>
+
+
       </>
    )
 }
