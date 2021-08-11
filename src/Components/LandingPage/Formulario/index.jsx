@@ -12,8 +12,9 @@ export function Formulario() {
    const [zipcode, setZipcode] = useState("");
    const [state, setState] = useState("");
    const [city, setCity] = useState("");
-   
-   const [cities, setCities] = useState([<option value=''>Cidade</option>]);
+
+   const [States, setStates] = useState([<option value=''>Estado</option>]);
+   const [Cities, setCities] = useState([<option value=''>Cidade</option>]);
 
    useEffect(() => {
       const script = document.createElement("script");
@@ -22,6 +23,9 @@ export function Formulario() {
       document.body.appendChild(script);
    }, []);
 
+   /*******************************************************************************************
+   ************ OBSERVANDO ALTERAÇÕES NO CEP PARA PLOTAR O ESTADO E CIDADE ********************
+   ********************************************************************************************/ 
    useEffect(() => {
       if (zipcode.length === 8) {
          getAddress();
@@ -30,12 +34,18 @@ export function Formulario() {
       }
    }, [zipcode]);
 
+   /*******************************************************************************************
+   ********* OBSERVANDO ALTERAÇÕES NO ESTADO PARA GERAR A LISTA DE CIDADES ********************
+   ********************************************************************************************/   
    useEffect(() => {
       if (state.length !== "") {
          generateCities();
       }
    }, [state]);
 
+   /*******************************************************************************************
+   ****************************** BUSCANDO ESTADO E CIDADE ************************************
+   ********************************************************************************************/
    async function getAddress() {
       try {
          const res = await sendRequest.getAddress({ "zipcode": zipcode });
@@ -51,16 +61,9 @@ export function Formulario() {
       }
    }
 
-   function generateStateComponent() {
-      let array = [];
-
-      states.forEach(element => {
-         array.push(<option value={element.nome}>{element.sigla} - {element.nome}</option>);
-      });
-
-      return array;
-   }
-
+   /*******************************************************************************************
+   ************************** GERANDO COMPONENTE DAS CIDADES **********************************
+   ********************************************************************************************/
    async function generateCities() {
       try {
          const res = await sendRequest.getAddress({ "state": state });
@@ -69,16 +72,26 @@ export function Formulario() {
             setCities([<option value=''>Cidade</option>]);
 
             res.cities.forEach(city => {
-               cities.push(<option value={city.text}>{city.text}</option>);
+               Cities.push(<option value={city.text}>{city.text}</option>);
             });
 
-            setCities(cities);
+            setCities(Cities);
          } else {
             console.log("Não achamos cidades para este estado");
          }
       } catch (error) {
          console.log(`Error: ${error}`)
       }
+   }
+
+   /*******************************************************************************************
+   ************************** GERANDO COMPONENTE DOS ESTADOS **********************************
+   ********************************************************************************************/
+   generateStateComponent();
+   function generateStateComponent() {
+      states.forEach(element => {
+         States.push(<option value={element.nome}>{element.sigla} - {element.nome}</option>);
+      });
    }
 
    return (
@@ -122,8 +135,7 @@ export function Formulario() {
                   onChange={value => setState(value.target.value)}
                   value={state}
                >
-                  <option value=''>Estado</option>
-                  {generateStateComponent()}
+                  {States}
                </select>
             </div>
 
@@ -133,7 +145,7 @@ export function Formulario() {
                   onChange={value => setCity(value.target.value)}
                   value={city}
                >
-                  {cities}
+                  {Cities}
                </select>
 
                <select placeholder="Estado Civil">
