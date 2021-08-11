@@ -9,13 +9,22 @@ import sendRequest from '../../../Services/sendRequest';
 
 export function Formulario() {
    const { handleChange, handleSubmit, values, errors } = useForm(validateInfo);
+
+   //Campos do Formulário
    const [zipcode, setZipcode] = useState("");
    const [state, setState] = useState("");
    const [city, setCity] = useState("");
 
+   //Opções de Estado
    const [States, setStates] = useState([<option value=''>Estado</option>]);
+   //Opções de Cidade
    const [Cities, setCities] = useState([<option value=''>Cidade</option>]);
+   //Bloqueio de Seleção
+   const [lockFields, setLockFields] = useState(true);
 
+   /*******************************************************************************************
+   ************************************** RDStation *******************************************
+   ********************************************************************************************/
    useEffect(() => {
       const script = document.createElement("script");
       script.src = "https://d335luupugsy2.cloudfront.net/js/loader-scripts/21d8841a-20c5-4aa8-bba0-b43bd35c3461-loader.js";
@@ -25,7 +34,7 @@ export function Formulario() {
 
    /*******************************************************************************************
    ************ OBSERVANDO ALTERAÇÕES NO CEP PARA PLOTAR O ESTADO E CIDADE ********************
-   ********************************************************************************************/ 
+   ********************************************************************************************/
    useEffect(() => {
       if (zipcode.length === 8) {
          getAddress();
@@ -35,11 +44,11 @@ export function Formulario() {
    }, [zipcode]);
 
    /*******************************************************************************************
-   ********* OBSERVANDO ALTERAÇÕES NO ESTADO PARA GERAR A LISTA DE CIDADES ********************
-   ********************************************************************************************/   
+   ***************** OBSERVANDO ALTERAÇÕES NO ESTADO PARA MONTAR CIDADE ***********************
+   ********************************************************************************************/
    useEffect(() => {
-      if (state.length !== "") {
-         generateCities();
+      if (state && !lockFields) {
+         generateCities(state, "");
       }
    }, [state]);
 
@@ -52,8 +61,12 @@ export function Formulario() {
 
          if (res && res.address && res.address.state && res.address.state.text) {
             setState(res.address.state.text);
-            setCity(res.address.city.text);
+            setLockFields(true);
+            generateCities(res.address.state.text, res.address.city.text);
          } else {
+            setState("");
+            setCity("");
+            setLockFields(false);
             console.log("Não achamos o CEP.");
          }
       } catch (error) {
@@ -64,21 +77,28 @@ export function Formulario() {
    /*******************************************************************************************
    ************************** GERANDO COMPONENTE DAS CIDADES **********************************
    ********************************************************************************************/
-   async function generateCities() {
+   async function generateCities(currentState, currentCity) {
       try {
-         const res = await sendRequest.getAddress({ "state": state });
-
+         //****************************************************************
+         const res = await sendRequest.getAddress({ "state": currentState });
+         //****************************************************************
          if (res && res.cities && res.cities.length > 0) {
-            setCities([<option value=''>Cidade</option>]);
-
+            //Limpa o array de componentes ********************************
+            do { Cities.pop() } while (Cities.length > 0);
+            //Constrói o array de componentes *****************************
+            Cities.push(<option value=''>Cidade</option>);
+            //*************************************************************
             res.cities.forEach(city => {
                Cities.push(<option value={city.text}>{city.text}</option>);
             });
-
+            //*************************************************************
             setCities(Cities);
+            setCity(currentCity);
+            //*************************************************************
          } else {
             console.log("Não achamos cidades para este estado");
          }
+         //****************************************************************
       } catch (error) {
          console.log(`Error: ${error}`)
       }
@@ -132,6 +152,7 @@ export function Formulario() {
 
                <select
                   placeholder="Estado"
+                  disabled={lockFields}
                   onChange={value => setState(value.target.value)}
                   value={state}
                >
@@ -142,6 +163,7 @@ export function Formulario() {
             <FieldContainer>
                <select
                   placeholder="Cidade"
+                  disabled={lockFields}
                   onChange={value => setCity(value.target.value)}
                   value={city}
                >
@@ -158,7 +180,6 @@ export function Formulario() {
 
 
             <FieldContainer>
-
                <select placeholder="Tem filhos?">
                   <option value=''>Tem filhos?</option>
                   <option value='Masculino'>Masculino</option>
@@ -174,14 +195,9 @@ export function Formulario() {
                </select>
             </FieldContainer>
 
-            {/* <button type="submit">
-            cadastrar
-
-         </button> */}
             <div style={{ marginTop: 20 }}>
                <Button title="Descubra o plano ideal pra você" />
             </div>
-
 
          </WrapperForm>
 
