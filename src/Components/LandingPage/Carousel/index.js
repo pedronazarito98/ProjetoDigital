@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Carousel from "react-multi-carousel";
-import { Image, Card } from "./style";
+import { Image, Card, EmployeeDescription } from "./style";
 import "react-multi-carousel/lib/styles.css";
 import { responsive, employees } from "../../../Mocks/LandingPage/mock";
 
@@ -30,14 +30,16 @@ export default function EmployeesSection() {
             if (currentCard === 3 && index === 1) { justify = "center"; increase = true; }
             if (currentCard === 3 && index === 2) { justify = "flex-start"; increase = false; }
 
+            //=====================================================================================
+
             componentArray.push(
-                <div style={{ display: "flex", alignItems: "center", justifyContent: justify, width: "95%", height: "400px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: justify, width: "100%", height: "400px" }}>
                     <Card increase={increase}>
                         <Image src={employee.img} alt="Texto Alternativo" />
                         <h3 style={{ color: "#45536b" }}>{employee.name}</h3>
-                        <div style={{ textAlign: "center", padding: 10, marginTop: 10, fontSize: "1rem", lineHeight: "25px", color: "#45536b" }}>
+                        <EmployeeDescription>
                             {employee.description}
-                        </div>
+                        </EmployeeDescription>
                     </Card>
                 </div>
             )
@@ -56,6 +58,7 @@ export default function EmployeesSection() {
             responsive={responsive}
             autoPlay
             swipeable
+            autoPlaySpeed={10000}
             removeArrowOnDeviceType={["tablet", "mobile"]}
         >
             {generateCards()}

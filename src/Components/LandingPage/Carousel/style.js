@@ -16,13 +16,13 @@ export const Card = styled.div`
   transition: 0.25s;
 
   @media(min-width: 1150px) {
-    height:${props => props.increase ? 400 : 390}px;
-    width: ${props => props.increase ? 100 : 70}%;
+    height:${props => props.increase ? 400 : 350}px;
+    width: ${props => props.increase ? 80 : 70}%;
   }
 
   &:hover{
     height: 400px;
-    width: 70%;
+    width: 80%;
   }
 `;
 
@@ -32,4 +32,15 @@ export const Image = styled.img`
   border-radius: 200px;
   margin-top: 20px;
   margin-bottom: 20px;
+`;
+
+export const EmployeeDescription = styled.div`
+  text-align: center; 
+  padding: 10; 
+  margin-top: 10; 
+  font-size: 1rem; 
+  line-height: 25px; 
+  color: #45536b;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
