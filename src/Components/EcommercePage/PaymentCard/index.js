@@ -1,4 +1,5 @@
 import { Container, Price } from "./style";
+import Zelo from "../../../Assets/EcommercePage/zelo.png";
 
 export default function PaymentCardComponent(props) {
 
@@ -7,8 +8,12 @@ export default function PaymentCardComponent(props) {
 
     return (
         <Container>
-            <Price>R$ 29,90 /MÊS</Price>
-            <br/>{text}<br/><br/>{text02}
+            <img src={Zelo} width="50px" height="50px" style={{ marginLeft: -60, marginTop: 40 }} />
+
+            <div style={{marginTop: -90}}>
+                <Price>R$ 29,90 /MÊS</Price>
+                <br />{text}<br /><br />{text02}
+            </div>
         </Container>
-    )
+    );
 }

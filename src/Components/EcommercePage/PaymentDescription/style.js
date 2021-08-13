@@ -9,13 +9,14 @@ export const Title = styled.div`
 `;
 
 export const Banner = styled.img`
-    width: 634px;
-    height: 188px;
+    width: 100%; //734px
+    height: 25,6130%; //188px
+    border-radius: 8px;
 `;
 
 export const Content = styled.div`
     color: var(--blue);
-
+    text-align: justify;
     margin-top: 15px;
 `;
 

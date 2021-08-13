@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { HomeEcommerce } from './Pages/EcommercePage/Home';
-import PaymentPage from './Pages/EcommercePage/Payment';
+import PlanEcommerce from './Pages/EcommercePage/Plan';
 import { LandingPage } from './Pages/LandingPage';
 
 
@@ -11,7 +11,7 @@ export default () => (
         <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route path="/ecommerce" component={HomeEcommerce} />
-            <Route path="/ecommercePayment" component={PaymentPage} />
+            <Route path="/ecommercePayment" component={PlanEcommerce} />
         </Switch>
     </BrowserRouter>
 )

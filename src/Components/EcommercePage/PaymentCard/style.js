@@ -9,11 +9,19 @@ export const Container = styled.div`
     position: sticky;
 
     top: 50px;
-    width: 30%;
+    width: 300px;
     height: 200px;
     padding: 30px;
+    margin-left: 10px;
 
     background-color:  #F9FBFF;
+
+    @media(max-width: 1224px) {
+        width: 800px;
+        top: 0px;
+        margin-left: 0px;
+    }
+
 `;
 
 export const Price = styled.h1`

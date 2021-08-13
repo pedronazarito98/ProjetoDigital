@@ -9,7 +9,7 @@ export const Title = styled.div`
     margin-bottom: 15px;
 `;
 
-export const Content = styled.div`
+export const Form = styled.div`
     color: var(--blue);
     font-size: 1rem;
     font-weight: 500;
