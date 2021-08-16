@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const ButtonAction = styled.a`
     
-    background-color: ${props => props.primary ? 'var(--blue)' : 'var(--white)'};
+    background-color:${props => props.primary ? 'var(--blue)' : 'var(--white)'};
     color: ${props => props.primary ? 'var(--white)' : 'var(--blue)'};
-    font-weight: bold;
+    font-weight: 500;
+    text-transform: uppercase;
     border: none;
     border-radius: 5px;
+    text-align: center;
 
     height: 50px;
     width: 320px;
+
+    cursor: pointer;
 
     padding: 15px;
 

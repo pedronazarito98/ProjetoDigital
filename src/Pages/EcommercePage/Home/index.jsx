@@ -1,10 +1,11 @@
 import { InfoText } from "../../../Components/EcommercePage/InfoText";
 import { Navbar } from "../../../Components/EcommercePage/Navbar";
-import { ContainerImg, Header, SectionCard, SectionViewVideo, TitleSectionCards } from "./style";
+import { ContainerImg, Header, SectionCard, SectionInfoPlanos, SectionViewVideo, TitleSectionCards } from "./style";
 import imgHome from '../../../Assets/EcommercePage/imgHome.png';
 import { Card } from "../../../Components/EcommercePage/Card";
 import { DadosCard } from "../../../Mocks/EcommercePage/DataCards";
 import { InfoVideo } from "../Views/Home/InfoVideo";
+import { InfoPlanos } from "../Views/Home/InfoPlanos";
 
 
 
@@ -42,6 +43,10 @@ export function HomeEcommerce() {
 
                 <InfoVideo />
             </SectionViewVideo>
+
+            <SectionInfoPlanos>
+                <InfoPlanos/>
+            </SectionInfoPlanos>
 
 
 

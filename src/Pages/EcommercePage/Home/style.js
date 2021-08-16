@@ -60,3 +60,9 @@ text-align: center;
 margin:50px;
 font-size: 2.5rem;
 `;
+
+export const SectionInfoPlanos = styled.section`
+    margin-bottom:100px;
+    margin-top:75px;
+
+`;
