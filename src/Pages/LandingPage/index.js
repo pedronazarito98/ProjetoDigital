@@ -98,15 +98,6 @@ export function LandingPage() {
                         <b>Cliente Grupo Zelo tem benefícios em vida com o Clube de Descontos do Ducash</b> que dá
                         descontos em farmácias, laboratórios, postos de gasolina, clínicas e vários outros
                         parceiros. Para você aproveitar a vida com mais tranquilidade.
-                        <br /><br />
-
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                            <div><b>+1.500.000</b><br />Clientes<br />Atendidos</div>
-                            <div style={{ height: "60px", borderRight: "2px solid #ca8211" }} />
-                            <div><b>+2.100.000</b><br />Parceiros</div>
-                            <div style={{ height: "60px", borderRight: "2px solid #ca8211" }} />
-                            <div><b>+600</b><br />Cidades<br />Atendidas</div>
-                        </div>
                     </div>
                 </DucashTextContainer>
             </DucashContainer>

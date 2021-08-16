@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
+import moment from 'moment';
 
 import {
     AccordionItem,
@@ -27,7 +28,7 @@ const ListItem = ({ onFullNameChange, onBirthDateChange, onDelete, value }) => {
             <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
-                        <b>Dependente:</b> {value.fullName} ({value.birthDate})
+                        <b>Dependente:</b> {value.fullName} ({moment(value.birthDate).format('DD/MM/YYYY')})
                     </Box>
                     <AccordionIcon />
                 </AccordionButton>

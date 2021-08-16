@@ -32,7 +32,17 @@ export const topics = [
 ];
 
 export const informations = [
-    {"title" : "Cremação", "description": " Na hora de se despedir, você também, pode optar pela cremação, homenagem escolhida por cada vez mais pessoas. Com o Grupo Zelo, o custo é acessível e vale para todos os dependentes. Se você deseja o serviço, por apenas R$10 por mês você inclui a cremação. De maneira simplificada, você traz mais uma tranquilidade a todos."},
-    {"title" : "Dependentes", "description": " Na hora de se despedir, você também, pode optar pela cremação, homenagem escolhida por cada vez mais pessoas. Com o Grupo Zelo, o custo é acessível e vale para todos os dependentes. Se você deseja o serviço, por apenas R$10 por mês você inclui a cremação. De maneira simplificada, você traz mais uma tranquilidade a todos."},
-    {"title" : "Taxa de Adesão Única", "description": " Diferentemente de outros grupos, no Zelo a taxa de adesão é única. Você efetua o pagamento de R$60 ao contratar o serviço e depois paga apenas as mensalidades e acréscimos que preferir."}
+    { "title": "Cremação", "description": " Na hora de se despedir, você também, pode optar pela cremação, homenagem escolhida por cada vez mais pessoas. Com o Grupo Zelo, o custo é acessível e vale para todos os dependentes. Se você deseja o serviço, por apenas R$10 por mês você inclui a cremação. De maneira simplificada, você traz mais uma tranquilidade a todos." },
+    { "title": "Dependentes", "description": " Na hora de se despedir, você também, pode optar pela cremação, homenagem escolhida por cada vez mais pessoas. Com o Grupo Zelo, o custo é acessível e vale para todos os dependentes. Se você deseja o serviço, por apenas R$10 por mês você inclui a cremação. De maneira simplificada, você traz mais uma tranquilidade a todos." },
+    { "title": "Taxa de Adesão Única", "description": " Diferentemente de outros grupos, no Zelo a taxa de adesão é única. Você efetua o pagamento de R$60 ao contratar o serviço e depois paga apenas as mensalidades e acréscimos que preferir." }
+];
+
+export const contacts = [
+    { "title": "São Paulo", "numbers": ["(11) 3090-3142"] },
+    { "title": "Espírito Santo", "numbers": ["(28) 3321-8270", "(27) 3229-2496"] },
+    { "title": "Goiás", "numbers": ["(61) 3686-0097", "(62) 3142-2895"] },
+    { "title": "Tocantins", "numbers": ["(63) 3142-0005"] },
+    { "title": "Minas Gerais", "numbers": ["(32) 3771-0210", "(35) 3042-0267", "(38) 3441-2747", , "(31) 3314-8000", "(33) 3038-1987", "(37) 3516-1122"] },
+    { "title": "Bahía", "numbers": ["(63) 3142-0005", "(77) 3086-8898"] }
+
 ];

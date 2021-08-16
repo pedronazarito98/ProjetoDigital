@@ -8,7 +8,8 @@ export const Container = styled.div`
 
     position: sticky;
 
-    top: 50px;
+    top: 8px;
+
     width: 300px;
     height: 200px;
     padding: 30px;

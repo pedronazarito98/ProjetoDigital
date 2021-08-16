@@ -85,14 +85,16 @@ export function Formulario() {
          if (res && res.cities && res.cities.length > 0) {
             //Limpa o array de componentes ********************************
             do { Cities.pop() } while (Cities.length > 0);
+
+            const itensCopy = Array.from(Cities);
             //Constrói o array de componentes *****************************
-            Cities.push(<option value=''>Cidade</option>);
+            itensCopy.push(<option value=''>Cidade</option>);
             //*************************************************************
             res.cities.forEach(city => {
-               Cities.push(<option value={city.text}>{city.text}</option>);
+               itensCopy.push(<option value={city.text}>{city.text}</option>);
             });
             //*************************************************************
-            setCities(Cities);
+            setCities(itensCopy);
             setCity(currentCity);
             //*************************************************************
          } else {
