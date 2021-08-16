@@ -1,3 +1,4 @@
+import { Button } from "../../../../../Components/EcommercePage/Button/styles";
 import { ContainerInfoVideo, ContainerVideo, SectionVideo, TitleInfo, WrapperCard, WrapperCardColor } from "./style";
 
 
@@ -35,7 +36,7 @@ export function InfoVideo() {
                 <ContainerInfoVideo>
                     <h2>Nosso papel é zelar
                         por você e a todos que ama.</h2>
-                    <button>Conheça nossos planos</button>
+                    <Button primary>Conheça</Button>
                 </ContainerInfoVideo>
             </SectionVideo>
         </>

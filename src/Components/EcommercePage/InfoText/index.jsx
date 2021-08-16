@@ -5,7 +5,7 @@ export function InfoText() {
     return (
         <WrapperText>
             <h2>
-                Planos Zelo para você e sua família
+                Planos Zelo para você e sua famílias
             </h2>
 
             <span>
