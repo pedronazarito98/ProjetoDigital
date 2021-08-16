@@ -92,6 +92,7 @@ h2{
 }
 
 button {
+    
     background: var(--blue);
     color: var(--white);
 }
